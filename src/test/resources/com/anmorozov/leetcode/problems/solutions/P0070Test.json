@@ -1,0 +1,15 @@
+[
+  {
+    "message": "Example 1 There are two ways to climb to the top.",
+    "n": 2,
+    "output": 2
+  }, {
+  "message": "Example 2",
+  "n": 3,
+  "output": 3
+}, {
+  "message": "Example 3",
+  "n": 45,
+  "output": 1836311903
+}
+]

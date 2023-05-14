@@ -1,0 +1,28 @@
+[
+  {
+    "message": "Example 1",
+    "m": 3,
+    "n": 7,
+    "output": 28
+  }, {
+  "message": "Example 2",
+  "m": 3,
+  "n": 2,
+  "output": 3
+}, {
+  "message": "Example 3",
+  "m": 10,
+  "n": 10,
+  "output": 48620
+}, {
+  "message": "Example 4",
+  "m": 23,
+  "n": 12,
+  "output": 193536720
+}, {
+  "message": "Example 5",
+  "m": 19,
+  "n": 13,
+  "output": 86493225
+}
+]

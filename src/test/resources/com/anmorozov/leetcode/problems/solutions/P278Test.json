@@ -1,0 +1,13 @@
+[
+  {
+    "message": "Example 1",
+    "n": 5,
+    "bad": 4,
+    "output": 4
+  }, {
+  "message": "Example 2",
+  "n": 1,
+  "bad": 1,
+  "output": 1
+}
+]

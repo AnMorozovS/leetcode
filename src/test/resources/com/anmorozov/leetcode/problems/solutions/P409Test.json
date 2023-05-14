@@ -1,0 +1,11 @@
+[
+  {
+    "message": "Example 1",
+    "input": "abccccdd",
+    "output": 7
+  }, {
+  "message": "Example 2",
+  "input": "a",
+  "output": 1
+}
+]

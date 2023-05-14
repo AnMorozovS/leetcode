@@ -1,0 +1,26 @@
+[
+  {
+    "message": "Example 1",
+    "head": [3, 2, 0, -4],
+    "pos": 1,
+    "output": 1
+  },
+  {
+    "message": "Example 2",
+    "head": [1, 2],
+    "pos": 0,
+    "output": 0
+  },
+  {
+    "message": "Example 3",
+    "head": [1],
+    "pos": -1,
+    "output": -1
+  },
+  {
+    "message": "Example 4",
+    "head": [],
+    "pos": -1,
+    "output": -1
+  }
+]
