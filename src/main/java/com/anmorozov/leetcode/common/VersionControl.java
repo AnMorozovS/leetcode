@@ -1,4 +1,4 @@
-package com.anmorozov.leetcode.problems.common;
+package com.anmorozov.leetcode.common;
 
 public class VersionControl {
 

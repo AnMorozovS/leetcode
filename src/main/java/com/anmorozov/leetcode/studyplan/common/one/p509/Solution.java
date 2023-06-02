@@ -1,7 +1,8 @@
-package com.anmorozov.leetcode.problems.solutions;
+package com.anmorozov.leetcode.studyplan.common.one.p509;
 
-public class P509 {
+public class Solution {
 
+    @SuppressWarnings("InstanceMethodNamingConvention")
     public int fib(int n) {
         if (n == 0) {
             return 0;
@@ -12,6 +13,7 @@ public class P509 {
         }
     }
 
+    @SuppressWarnings("InstanceMethodNamingConvention")
     public int fib(int n0, int n1, int iteration, int n) {
         if (iteration >= n) {
             return n0 + n1;

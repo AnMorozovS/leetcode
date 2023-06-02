@@ -1,4 +1,4 @@
-package com.anmorozov.leetcode.problems.common;
+package com.anmorozov.leetcode.common;
 
 import java.util.HashSet;
 import java.util.Set;

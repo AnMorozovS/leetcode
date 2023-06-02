@@ -1,4 +1,4 @@
-package com.anmorozov.leetcode.problems.common;
+package com.anmorozov.leetcode.common;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,26 +10,29 @@ import org.junit.jupiter.params.provider.Arguments;
 
 public class BaseTest<T, E> {
 
-    private final Class<T> childClass;
+    protected static List<Arguments> testCases;
     private final TypeReference<List<E>> typeReference;
     private final Function<E, Arguments> func;
     private final String jsonName;
+    private final Class<T> classForResource;
 
-    public BaseTest(Class<T> childClass, TypeReference<List<E>> typeReference,
+    public BaseTest(Class<T> classForResource, TypeReference<List<E>> typeReference,
                     Function<E, Arguments> func) {
-        this(childClass, typeReference, func, childClass.getSimpleName());
+        this(classForResource, typeReference, func, classForResource.getSimpleName());
     }
 
-    public BaseTest(Class<T> childClass, TypeReference<List<E>> typeReference,
+    public BaseTest(Class<T> classForResource, TypeReference<List<E>> typeReference,
                     Function<E, Arguments> func, String jsonName) {
-        this.childClass = childClass;
+        this.classForResource = classForResource;
         this.typeReference = typeReference;
         this.func = func;
         this.jsonName = jsonName;
     }
 
     public List<Arguments> prepare() throws IOException {
-        InputStream is = childClass.getResourceAsStream(jsonName + ".json");
+        System.out.println(classForResource.getCanonicalName());
+        System.out.println(this.getClass().getCanonicalName());
+        InputStream is = classForResource.getResourceAsStream(jsonName + ".json");
 
         ObjectMapper objectMapper = new ObjectMapper();
 

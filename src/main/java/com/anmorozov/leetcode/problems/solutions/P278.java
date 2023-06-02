@@ -1,6 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-import com.anmorozov.leetcode.problems.common.VersionControl;
+import com.anmorozov.leetcode.common.VersionControl;
 
 public class P278 extends VersionControl {
 

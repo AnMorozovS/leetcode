@@ -1,7 +1,7 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-import com.anmorozov.leetcode.problems.common.BaseTest;
-import com.anmorozov.leetcode.problems.common.TreeNode;
+import com.anmorozov.leetcode.common.BaseTest;
+import com.anmorozov.leetcode.common.TreeNode;
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.IOException;
 import java.util.Arrays;

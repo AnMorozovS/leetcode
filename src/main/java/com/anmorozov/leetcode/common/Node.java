@@ -1,4 +1,4 @@
-package com.anmorozov.leetcode.problems.common;
+package com.anmorozov.leetcode.common;
 
 import java.util.ArrayList;
 import java.util.List;

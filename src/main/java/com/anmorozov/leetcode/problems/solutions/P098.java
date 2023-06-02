@@ -1,6 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-import com.anmorozov.leetcode.problems.common.TreeNode;
+import com.anmorozov.leetcode.common.TreeNode;
 import java.util.Deque;
 import java.util.LinkedList;
 

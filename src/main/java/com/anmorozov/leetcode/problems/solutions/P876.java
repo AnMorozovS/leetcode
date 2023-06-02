@@ -1,6 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-import com.anmorozov.leetcode.problems.common.ListNode;
+import com.anmorozov.leetcode.common.ListNode;
 
 public class P876 {
 
