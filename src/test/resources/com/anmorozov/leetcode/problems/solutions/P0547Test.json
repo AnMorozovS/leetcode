@@ -1,0 +1,11 @@
+[
+  {
+    "message": "Example 1",
+    "isConnected": [[1, 1, 0], [1, 1, 0], [0, 0, 1]],
+    "output": 2
+  }, {
+  "message": "Example 2",
+  "isConnected": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+  "output": 3
+}
+]
