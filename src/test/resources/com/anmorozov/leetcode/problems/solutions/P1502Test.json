@@ -1,0 +1,23 @@
+[
+  {
+    "message": "Example 1",
+    "arr": [3, 5, 1],
+    "output": true
+  }, {
+  "message": "Example 2",
+  "arr": [1, 2, 4],
+  "output": false
+}, {
+  "message": "Test 2",
+  "arr": [0, 0, 0, 0],
+  "output": true
+}, {
+  "message": "Test 103",
+  "arr": [1, 10, 10, 10, 19],
+  "output": false
+}, {
+  "message": "Test 107",
+  "arr": [0, 0, 1],
+  "output": false
+}
+]
