@@ -44,9 +44,6 @@ public class P2101 {
                 }
             }
             detonatedTotal.put(mainCycleBomb, detonatedTotalByMainCycleBomb);
-
-            System.out.println(toStringBombMap(detonatedTotal));
-            System.out.println("-----------------------------");
         }
 
         int maxSize = 1;

@@ -30,7 +30,7 @@ public class P098 {
             if (root == null) {
                 continue;
             }
-            val = root.val;
+            val = root.value;
             if (low != null && val <= low) {
                 return false;
             }

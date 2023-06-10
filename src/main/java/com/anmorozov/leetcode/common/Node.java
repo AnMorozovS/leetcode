@@ -5,19 +5,12 @@ import java.util.List;
 
 public class Node {
 
-    public int val;
+    public int value;
     public List<Node> children;
 
-    public Node() {
-    }
-
-    public Node(int _val) {
-        val = _val;
-    }
-
-    public Node(int _val, List<Node> _children) {
-        val = _val;
-        children = _children;
+    public Node(int value, List<Node> children) {
+        this.value = value;
+        this.children = children;
     }
 
     public static Node convertNodeArray(int[] array) {
@@ -27,15 +20,12 @@ public class Node {
         Node parent = null;
         Node child;
         int parentIndex = 0;
-        for (int i = 0; i < array.length; i++) {
-            System.out.printf("array[%1$d] = %2$d group %3$d in %4$d\n", i, array[i], parentIndex, parents.size());
-            if (array[i] == 0) {
+        for (int j : array) {
+            if (j == 0) {
                 if (parentIndex < (parents.size() - 1)) {
-                    System.out.println("group change");
                     parentIndex++;
                     parent = parents.get(parentIndex);
                 } else {
-                    System.out.println("level change");
                     parents = children;
                     parentIndex = 0;
                     parent = children.get(0);
@@ -43,8 +33,7 @@ public class Node {
 
                 }
             } else {
-                System.out.println("child change");
-                child = new Node(array[i], new ArrayList<>());
+                child = new Node(j, new ArrayList<>());
                 if (head == null) {
                     head = child;
                 }

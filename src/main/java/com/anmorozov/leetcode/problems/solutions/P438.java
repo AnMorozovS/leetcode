@@ -17,11 +17,9 @@ public class P438 {
         for (int i = 0; i < sArray.length; i++) {
 
             Character character = sArray[i];
-//            System.out.printf("[%1$d] =%2$s\t-\t%3$s\n", i, character, currentAnagram);
 
             if (!currentAnagram.isEmpty() && currentAnagram.size() >= p.length()) {
                 Character character1 = currentAnagram.remove();
-//                System.out.printf("[%1$d] =%2$s\t-\t%3$s\t\tremoved %4$s\n", i, character, currentAnagram, character1);
                 Queue<Character> currentQueue1 = map.get(character1);
                 currentQueue1.add(character1);
             }
@@ -29,25 +27,17 @@ public class P438 {
                 Queue<Character> currentQueue = map.get(character);
                 Character removedChar = currentQueue.poll();
                 currentAnagram.add(removedChar);
-//                System.out.printf("[%1$d] =%2$s\t-\t%3$s\t\tadded %4$s\n", i, character, currentAnagram, removedChar);
                 if (currentAnagram.size() == p.length()) {
-//                    System.out.printf("[%1$d] =%2$s\t-\t%3$s\t\tmatch\n", i, character, currentAnagram);
                     result.add(i + 1 - p.length());
                 }
             } else {
                 while (!currentAnagram.isEmpty()) {
                     if (currentAnagram.element().equals(character)) {
                         Character removedChar = currentAnagram.remove();
-//                        System.out.printf("[%1$d] =%2$s\t-\t%3$s\t\tremoved while %4$s\n", i, character, currentAnagram,
-//                                removedChar);
                         currentAnagram.add(removedChar);
-//                        System.out.printf("[%1$d] =%2$s\t-\t%3$s\t\tadded while %4$s\n", i, character, currentAnagram,
-//                                removedChar);
                         break;
                     } else {
                         Character character1 = currentAnagram.remove();
-//                        System.out.printf("[%1$d] =%2$s\t-\t%3$s\t\tremoved while %4$s\n", i, character, currentAnagram,
-//                                character1);
                         Queue<Character> currentQueue = map.get(character1);
                         currentQueue.add(character1);
                     }

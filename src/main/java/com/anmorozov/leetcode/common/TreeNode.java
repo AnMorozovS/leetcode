@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 public class TreeNode {
 
-    public int val;
+    public int value;
     public TreeNode left;
     public TreeNode right;
 
@@ -15,11 +15,11 @@ public class TreeNode {
     }
 
     public TreeNode(int value) {
-        this.val = value;
+        this.value = value;
     }
 
     public TreeNode(int value, TreeNode left, TreeNode right) {
-        this.val = value;
+        this.value = value;
         this.left = left;
         this.right = right;
     }
@@ -36,9 +36,7 @@ public class TreeNode {
         TreeNode child;
         int parentIndex = 0;
         for (int i = 1; i < array.length; i++) {
-            System.out.printf("array[%1$d] = %2$d group %3$d in %4$d\n", i, array[i], parentIndex, parents.size());
             if (parentIndex >= parents.size() * 2) {
-                System.out.println("level change");
                 parents = children;
                 parentIndex = 0;
                 children = new ArrayList<>();
@@ -60,7 +58,7 @@ public class TreeNode {
     }
 
     public TreeNode findByNumber(int nodeNumber) {
-        int val = this.val;
+        int val = this.value;
         if (val == nodeNumber) {
             return this;
         } else if (val < nodeNumber) {
@@ -117,7 +115,7 @@ public class TreeNode {
         } else {
             map = finalList.get(level);
         }
-        map.put(number, String.valueOf(head.val));
+        map.put(number, String.valueOf(head.value));
         int nextLevel = level + 1;
         if (head.left != null) {
             int nextLevelNumber = number * 2;

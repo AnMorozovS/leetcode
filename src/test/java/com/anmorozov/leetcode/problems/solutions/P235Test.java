@@ -34,14 +34,6 @@ class P235Test {
     @ParameterizedTest(name = "{0}")
     @MethodSource
     void lowestCommonAncestor(String message, TreeNode root, TreeNode p, TreeNode q, TreeNode output) {
-        System.out.println("root\n");
-        System.out.print(root);
-        System.out.println("p\n");
-        System.out.print(p);
-        System.out.println("q\n");
-        System.out.print(q);
-        System.out.println("output\n");
-        System.out.print(output);
         P235 p235 = new P235();
         TreeNode actual = p235.lowestCommonAncestor(root, p, q);
         assertEquals(output, actual);

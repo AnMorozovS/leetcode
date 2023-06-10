@@ -3,7 +3,6 @@ package com.anmorozov.leetcode.problems.solutions;
 import com.anmorozov.leetcode.common.BaseTest;
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeAll;
@@ -33,7 +32,6 @@ class P733Test {
     @ParameterizedTest(name = "{0} [{2}][{3}] -> {4}")
     @MethodSource
     void floodFill(String message, int[][] image, int sr, int sc, int color, int[][] output) {
-        Arrays.stream(image).forEach(x -> System.out.println(Arrays.toString(x)));
         P733 p733 = new P733();
         int[][] actual = p733.floodFill(image, sr, sc, color);
         assertArrayEquals(output, actual);

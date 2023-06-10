@@ -8,9 +8,6 @@ class Solution {
         int currentIndex;
         while (smallestIndex <= largestIndex) {
             currentIndex = smallestIndex + (largestIndex - smallestIndex) / 2;
-            System.out.printf("currentIndex = %1$d , largestIndex = %2$d , smallestIndex %3$d\n", currentIndex,
-                    largestIndex, smallestIndex);
-            System.out.printf("nums[%1$d] == %2$d\n", currentIndex, nums[currentIndex]);
             if (nums[currentIndex] == target) {
                 return currentIndex;
             } else if (nums[currentIndex] > target) {

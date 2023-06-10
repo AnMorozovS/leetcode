@@ -24,7 +24,5 @@ public class P001B {
                 maxResult = currentResult;
             }
         }
-
-        System.out.println(maxResult);
     }
 }

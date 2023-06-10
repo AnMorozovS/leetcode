@@ -33,7 +33,6 @@ class P098Test {
     @ParameterizedTest(name = "{0}")
     @MethodSource
     void isValidBST(String message, TreeNode root, boolean output) {
-        System.out.print(root);
         P098 p098 = new P098();
         boolean actual = p098.isValidBST(root);
         assertEquals(output, actual);

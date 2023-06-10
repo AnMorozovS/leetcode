@@ -26,7 +26,7 @@ public class P102 {
         } else {
             list = finalList.get(level);
         }
-        list.add(head.val);
+        list.add(head.value);
         int nextLevel = level + 1;
         if (head.left != null) {
             addNodeToList(finalList, head.left, nextLevel);

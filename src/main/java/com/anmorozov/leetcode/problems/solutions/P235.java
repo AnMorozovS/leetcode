@@ -35,10 +35,10 @@ public class P235 {
             return false;
         }
         pList.add(root);
-        if (root.val == node.val) {
+        if (root.value == node.value) {
             return true;
         } else {
-            if (root.val <= node.val) {
+            if (root.value <= node.value) {
                 return getParentNodes(root.right, node, pList);
             }
             return getParentNodes(root.left, node, pList);

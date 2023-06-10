@@ -9,7 +9,7 @@ public class P589 {
     public List<Integer> preorder(Node root) {
         List<Integer> list = new ArrayList<>();
         if (root != null) {
-            list.add(root.val);
+            list.add(root.value);
             addNodeToList(list, root);
         }
         return list;
@@ -17,7 +17,7 @@ public class P589 {
 
     public void addNodeToList(List<Integer> list, Node head) {
         for (Node child : head.children) {
-            list.add(child.val);
+            list.add(child.value);
             addNodeToList(list, child);
         }
     }

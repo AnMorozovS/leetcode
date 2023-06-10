@@ -15,7 +15,6 @@ public class P1376 {
                 graphById.computeIfAbsent(manager[i], x -> new ArrayList<>()).add(i);
             }
         }
-        System.out.print(graphToLevelToString(graphById, headID));
         return depthFirstSearchRecursive(headID, graphById, informTime);
     }
 

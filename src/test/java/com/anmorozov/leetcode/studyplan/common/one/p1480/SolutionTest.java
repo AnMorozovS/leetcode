@@ -3,7 +3,6 @@ package com.anmorozov.leetcode.studyplan.common.one.p1480;
 import com.anmorozov.leetcode.common.BaseTest;
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeAll;
@@ -34,14 +33,8 @@ class SolutionTest {
     @MethodSource
     void runningSum(String message, int[] nums, int[] output) {
         Solution solution = new Solution();
-        LocalDateTime startTime1 = LocalDateTime.now();
-        long startTime = System.nanoTime();
         int[] actual = solution.runningSum(nums);
-        long endTime = System.nanoTime();
-        LocalDateTime endTime1 = LocalDateTime.now();
         assertArrayEquals(output, actual);
-        System.out.printf("Start (%1$tL - %2$tL) for %3$f\n", startTime1, endTime1,
-                (endTime - startTime) / 1000000000d);
 
     }
 

@@ -18,10 +18,6 @@ class P876Test {
     }
 
     @Test
-    void cleanByFistElement() {
-    }
-
-    @Test
     void isOnlyTwoLetterWrap() {
         String[] str = {"tars", "rats", "arts", "star"};
         Solution solution = new Solution();

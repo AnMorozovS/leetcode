@@ -30,8 +30,6 @@ public class BaseTest<T, E> {
     }
 
     public List<Arguments> prepare() throws IOException {
-        System.out.println(classForResource.getCanonicalName());
-        System.out.println(this.getClass().getCanonicalName());
         InputStream is = classForResource.getResourceAsStream(jsonName + ".json");
 
         ObjectMapper objectMapper = new ObjectMapper();

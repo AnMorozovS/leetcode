@@ -3,7 +3,6 @@ package com.anmorozov.leetcode.problems.solutions;
 import com.anmorozov.leetcode.common.BaseTest;
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeAll;
@@ -33,7 +32,6 @@ class P200Test {
     @ParameterizedTest(name = "{0}")
     @MethodSource
     void numIslands(String message, char[][] grid, int output) {
-        Arrays.stream(grid).forEach(x -> System.out.println(Arrays.toString(x)));
         P200 p200 = new P200();
         int actual = p200.numIslands(grid);
         assertEquals(output, actual);

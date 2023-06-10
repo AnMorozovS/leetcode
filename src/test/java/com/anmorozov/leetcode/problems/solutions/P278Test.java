@@ -32,11 +32,9 @@ class P278Test {
     @ParameterizedTest(name = "n = {1}, bad = {2}")
     @MethodSource
     void firstBadVersion(String message, int n, int bad, int output) {
-        System.out.printf("Start %s with n = %d, bad = %d\n", message, n, bad);
         P278 p278 = new P278(bad);
         int actual = p278.firstBadVersion(n);
         assertEquals(output, actual);
-        System.out.println();
     }
 
     record SolutionRecord(String message, int n, int bad, int output) {
