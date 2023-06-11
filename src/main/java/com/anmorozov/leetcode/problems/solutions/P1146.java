@@ -32,8 +32,8 @@ public class P1146 {
 
     static class SnapshotArray {
 
-        Map<Integer, NavigableMap<Integer, Integer>> valueChangeMap;
-        int snapShotId;
+        private final Map<Integer, NavigableMap<Integer, Integer>> valueChangeMap;
+        private int snapShotId;
 
         public SnapshotArray(int length) {
             snapShotId = 0;

@@ -2,7 +2,7 @@ package com.anmorozov.leetcode.common;
 
 public class VersionControl {
 
-    int badVersion;
+    private final int badVersion;
 
     public VersionControl(int badVersion) {
         this.badVersion = badVersion;

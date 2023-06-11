@@ -48,15 +48,7 @@ public class P0733 {
         }
     }
 
-    class Cell {
-
-        final int xCoordinate;
-        final int yCoordinate;
-
-        public Cell(int xCoordinate, int yCoordinate) {
-            this.xCoordinate = xCoordinate;
-            this.yCoordinate = yCoordinate;
-        }
+    record Cell(int xCoordinate, int yCoordinate) {
 
         @Override
         public boolean equals(Object o) {

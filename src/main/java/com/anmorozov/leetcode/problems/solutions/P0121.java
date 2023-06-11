@@ -6,20 +6,6 @@ public class P0121 {
         return o1simple(prices);
     }
 
-
-    private int o2simple(int[] prices) {
-        int profit = 0;
-        for (int i = 0; i < prices.length; i++) {
-            for (int j = i + 1; j < prices.length; j++) {
-                int currentProfit = prices[j] - prices[i];
-                if (currentProfit > profit) {
-                    profit = currentProfit;
-                }
-            }
-        }
-        return profit;
-    }
-
     private int o1simple(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;

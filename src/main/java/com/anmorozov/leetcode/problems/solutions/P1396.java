@@ -1,58 +1,61 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.OptionalDouble;
+import javafx.util.Pair;
 
 public class P1396 {
 
+    class UndergroundSystem {
 
-    Map<String, List<Double>> averageTimeStorage;
-    Map<Integer, StationTime> checkInStorage;
+        private final Map<String, Pair<Double, Double>> journeyData = new HashMap<>();
+        private final Map<Integer, Pair<String, Integer>> checkInData = new HashMap<>();
 
-    public P1396() {
-        this.averageTimeStorage = new HashMap<>();
-        this.checkInStorage = new HashMap<>();
-    }
-
-    public void checkIn(int id, String stationName, int t) {
-        Map<String, Integer> stationTime = new HashMap<>();
-        stationTime.put(stationName, t);
-        checkInStorage.put(id, new StationTime(stationName, t));
-    }
-
-    public void checkOut(int id, String stationName, int t) {
-        StationTime stationTime = checkInStorage.get(id);
-        String stationNameIn = stationTime.stationName();
-        int timeIn = stationTime.t();
-        double timePassed = (double) timeIn - t;
-        String stationKey = getStationsKey(stationNameIn, stationName);
-        if (!averageTimeStorage.containsKey(stationKey)) {
-            List<Double> list = new ArrayList<>();
-            list.add(timePassed);
-            averageTimeStorage.put(stationKey, list);
-        } else {
-            List<Double> list = averageTimeStorage.get(stationKey);
-            list.add(timePassed);
+        public UndergroundSystem() {
         }
-        checkInStorage.remove(id);
+
+        public void checkIn(int id, String stationName, int t) {
+            checkInData.put(id, new Pair<>(stationName, t));
+        }
+
+        public void checkOut(int id, String stationName, int t) {
+            // Look up the check in station and check in time for this id.
+            // You could combine this "unpacking" into the other lines of code
+            // to have less lines of code overall, but we've chosen to be verbose
+            // here to make it easy for all learners to follow.
+            Pair<String, Integer> checkInDataForId = checkInData.get(id);
+            String startStation = checkInDataForId.getKey();
+            Integer checkInTime = checkInDataForId.getValue();
+
+            // Lookup the current travel time data for this route.
+            String routeKey = stationsKey(startStation, stationName);
+            Pair<Double, Double> routeStats = journeyData.getOrDefault(routeKey, new Pair<>(0.0, 0.0));
+            Double totalTripTime = routeStats.getKey();
+            Double totalTrips = routeStats.getValue();
+
+            // Update the travel time data with this trip.
+            double tripTime = t - checkInTime;
+            journeyData.put(routeKey, new Pair<>(totalTripTime + tripTime, totalTrips + 1));
+
+            // Remove check in data for this id.
+            // Note that this is optional, we'll talk about it in the space complexity analysis.
+            checkInData.remove(id);
+        }
+
+        public double getAverageTime(String startStation, String endStation) {
+            // Lookup how many times this journey has been made, and the total time.
+            String routeKey = stationsKey(startStation, endStation);
+            Double totalTime = journeyData.get(routeKey).getKey();
+            Double totalTrips = journeyData.get(routeKey).getValue();
+            // The average is simply the total divided by the number of trips.
+            return totalTime / totalTrips;
+        }
+
+        private String stationsKey(String startStation, String endStation) {
+            return startStation + "->" + endStation;
+        }
     }
 
-    private String getStationsKey(String startStation, String endStation) {
-        return startStation + "-" + endStation;
-    }
 
-    public double getAverageTime(String startStation, String endStation) {
-        String stationKey = getStationsKey(startStation, endStation);
-        List<Double> list = averageTimeStorage.get(stationKey);
-        OptionalDouble average = list.stream().mapToDouble(a -> a).average();
-        return average.orElse(0d);
-    }
-
-    record StationTime(String stationName, int t) {
-
-    }
 
 }
