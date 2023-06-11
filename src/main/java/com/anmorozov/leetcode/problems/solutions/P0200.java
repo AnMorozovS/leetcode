@@ -1,6 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-public class P200 {
+public class P0200 {
 
     public int numIslands(char[][] grid) {
         int count = 0;

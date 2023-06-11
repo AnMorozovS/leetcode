@@ -1,6 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-public class P121 {
+public class P0121 {
 
     public int maxProfit(int[] prices) {
         return o1simple(prices);

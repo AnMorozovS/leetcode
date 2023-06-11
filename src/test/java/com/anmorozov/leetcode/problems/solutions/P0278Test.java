@@ -3,9 +3,7 @@ package com.anmorozov.leetcode.problems.solutions;
 import com.anmorozov.leetcode.common.BaseTest;
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.IOException;
-import java.util.List;
 import java.util.stream.Stream;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -13,27 +11,19 @@ import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-class P278Test {
+class P0278Test {
 
-    private static List<Arguments> testCases;
-
-    @BeforeAll
-    static void beforeAll() throws IOException {
-        BaseTest<P278Test, SolutionRecord> baseTest = new BaseTest<>(P278Test.class, new TypeReference<>() {
+    static Stream<Arguments> firstBadVersion() throws IOException {
+        BaseTest<P0278Test, SolutionRecord> baseTest = new BaseTest<>(P0278Test.class, new TypeReference<>() {
         }, SolutionRecord::getArguments);
-        testCases = baseTest.prepare();
-
-    }
-
-    static Stream<Arguments> firstBadVersion() {
-        return testCases.stream();
+        return baseTest.prepare().stream();
     }
 
     @ParameterizedTest(name = "n = {1}, bad = {2}")
     @MethodSource
     void firstBadVersion(String message, int n, int bad, int output) {
-        P278 p278 = new P278(bad);
-        int actual = p278.firstBadVersion(n);
+        P0278 p0278 = new P0278(bad);
+        int actual = p0278.firstBadVersion(n);
         assertEquals(output, actual);
     }
 

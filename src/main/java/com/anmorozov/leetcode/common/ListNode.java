@@ -1,25 +1,22 @@
 package com.anmorozov.leetcode.common;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Definition for singly-linked list.
  */
 public class ListNode {
 
-    public int val;
+    public int value;
     public ListNode next;
 
     public ListNode() {
     }
 
     public ListNode(int val) {
-        this.val = val;
+        this.value = val;
     }
 
     public ListNode(int val, ListNode next) {
-        this.val = val;
+        this.value = val;
         this.next = next;
     }
 
@@ -82,7 +79,7 @@ public class ListNode {
 
         ListNode listNode = (ListNode) o;
 
-        if (val != listNode.val) {
+        if (value != listNode.value) {
             return false;
         }
         if (this.next == null && listNode.next == null) {
@@ -92,21 +89,20 @@ public class ListNode {
         } else if (listNode.next == null) {
             return false;
         } else {
-            return this.next.val == listNode.next.val;
+            return this.next.value == listNode.next.value;
         }
     }
 
     @Override
     public int hashCode() {
-        int result = val;
-        result = 31 * result + (next != null ? next.val : 0);
+        int result = value;
+        result = 31 * result + (next != null ? next.value : 0);
         return result;
     }
 
     @Override
     public String toString() {
-        Set<Integer> set = new HashSet<>();
 
-        return "" + val + (next != null ? ", " + next.val : "");
+        return "" + value + (next != null ? ", " + next.value : "");
     }
 }

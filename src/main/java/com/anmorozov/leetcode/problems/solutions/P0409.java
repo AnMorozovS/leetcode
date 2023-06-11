@@ -3,7 +3,7 @@ package com.anmorozov.leetcode.problems.solutions;
 import java.util.HashMap;
 import java.util.Map;
 
-public class P409 {
+public class P0409 {
 
     public int longestPalindrome(String s) {
         Map<Character, Integer> map = new HashMap<>();

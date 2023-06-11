@@ -2,9 +2,9 @@ package com.anmorozov.leetcode.problems.solutions;
 
 import com.anmorozov.leetcode.common.VersionControl;
 
-public class P278 extends VersionControl {
+public class P0278 extends VersionControl {
 
-    public P278(int badVersion) {
+    public P0278(int badVersion) {
         super(badVersion);
     }
 

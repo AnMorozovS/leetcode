@@ -2,7 +2,7 @@ package com.anmorozov.leetcode.problems.solutions;
 
 import com.anmorozov.leetcode.common.ListNode;
 
-public class P876 {
+public class P0876 {
 
     public ListNode middleNode(ListNode head) {
         ListNode slow = head;

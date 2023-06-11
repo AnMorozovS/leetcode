@@ -10,7 +10,6 @@ import org.junit.jupiter.params.provider.Arguments;
 
 public class BaseTest<T, E> {
 
-    protected static List<Arguments> testCases;
     private final TypeReference<List<E>> typeReference;
     private final Function<E, Arguments> func;
     private final String jsonName;

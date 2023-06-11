@@ -3,7 +3,7 @@ package com.anmorozov.leetcode.problems.solutions;
 import java.util.HashMap;
 import java.util.Map;
 
-public class P746 {
+public class P0746 {
 
     final Map<Integer, Integer> integerHashMap = new HashMap<>();
 

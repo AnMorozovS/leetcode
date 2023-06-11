@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -16,27 +15,19 @@ import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-class P102Test {
+class P0102Test {
 
-    private static List<Arguments> testCases;
-
-    @BeforeAll
-    static void beforeAll() throws IOException {
-        BaseTest<P102Test, SolutionRecord> baseTest = new BaseTest<>(P102Test.class, new TypeReference<>() {
+    static Stream<Arguments> levelOrder() throws IOException {
+        BaseTest<P0102Test, SolutionRecord> baseTest = new BaseTest<>(P0102Test.class, new TypeReference<>() {
         }, SolutionRecord::getArguments);
-        testCases = baseTest.prepare();
-
-    }
-
-    static Stream<Arguments> levelOrder() {
-        return testCases.stream();
+        return baseTest.prepare().stream();
     }
 
     @ParameterizedTest(name = "{0} levelOrder TreeNode")
     @MethodSource
     void levelOrder(String message, TreeNode root, List<List<Integer>> output) {
-        P102 p102 = new P102();
-        List<List<Integer>> actual = p102.levelOrder(root);
+        P0102 p0102 = new P0102();
+        List<List<Integer>> actual = p0102.levelOrder(root);
         assertEquals(output, actual);
     }
 

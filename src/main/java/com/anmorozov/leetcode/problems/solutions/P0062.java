@@ -12,6 +12,7 @@ public class P0062 {
         return faqt(m - 1 + n - 1).divide(faqt(m - 1)).divide(faqt(n - 1)).intValue();
     }
 
+    @SuppressWarnings("SpellCheckingInspection")
     public BigInteger faqt(int x) {
         if (x <= 1) {
             return BigInteger.ONE;

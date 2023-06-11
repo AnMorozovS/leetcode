@@ -4,7 +4,7 @@ import com.anmorozov.leetcode.common.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class P235 {
+public class P0235 {
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         List<TreeNode> pList = new ArrayList<>();

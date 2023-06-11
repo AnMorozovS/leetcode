@@ -4,7 +4,7 @@ import com.anmorozov.leetcode.common.TreeNode;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class P098 {
+public class P0098 {
 
     private final Deque<TreeNode> stack = new LinkedList<>();
     private final Deque<Integer> upperLimits = new LinkedList<>();

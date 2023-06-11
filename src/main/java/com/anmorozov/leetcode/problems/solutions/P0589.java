@@ -4,7 +4,7 @@ import com.anmorozov.leetcode.common.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class P589 {
+public class P0589 {
 
     public List<Integer> preorder(Node root) {
         List<Integer> list = new ArrayList<>();

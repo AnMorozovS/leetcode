@@ -16,14 +16,14 @@ public class P1091 {
         if (grid[0][0] != 0 || grid[endPosition][endPosition] != 0) {
             return -1;
         }
-        Queue<int[]> currentPossitions = new LinkedList<>();
-        currentPossitions.add(new int[] {0, 0});
+        Queue<int[]> currentPositions = new LinkedList<>();
+        currentPositions.add(new int[] {0, 0});
 
         int generationCount = 1;
         while (true) {
             Queue<int[]> nextPositions = new LinkedList<>();
             while (true) {
-                int[] position = currentPossitions.poll();
+                int[] position = currentPositions.poll();
                 if (position == null) {
                     break;
                 } else if (position[0] == endPosition && position[1] == endPosition) {
@@ -37,7 +37,7 @@ public class P1091 {
             if (nextPositions.isEmpty()) {
                 return -1;
             }
-            currentPossitions = nextPositions;
+            currentPositions = nextPositions;
 
         }
     }

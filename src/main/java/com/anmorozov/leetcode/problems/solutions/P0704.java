@@ -1,6 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-public class P704 {
+public class P0704 {
 
     public int search(int[] nums, int target) {
         int largestIndex = nums.length - 1;

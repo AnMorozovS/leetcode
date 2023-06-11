@@ -3,7 +3,7 @@ package com.anmorozov.leetcode.problems.solutions;
 import java.util.HashSet;
 import java.util.Set;
 
-public class P733 {
+public class P0733 {
 
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
         Set<Cell> currentSet = new HashSet<>();

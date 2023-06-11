@@ -21,6 +21,7 @@ class P0062Test {
         return baseTest.prepare().stream();
     }
 
+    @DisplayName("uniquePaths")
     @ParameterizedTest(name = "{0}: m = {1}, n = {2}, output = {3}")
     @MethodSource
     void uniquePaths(String message, int m, int n, int output) {

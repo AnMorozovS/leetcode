@@ -2,7 +2,7 @@ package com.anmorozov.leetcode.problems.solutions;
 
 import com.anmorozov.leetcode.common.ListNode;
 
-public class P142 {
+public class P0142 {
 
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head;
@@ -18,13 +18,7 @@ public class P142 {
                 }
                 return fast;
             }
-
         }
-
-        if (fast == null) {
-            return null;
-        }
-
-        return fast.next;
+        return null;
     }
 }
