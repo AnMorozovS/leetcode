@@ -1,0 +1,15 @@
+[
+  {
+    "message": "Example 1",
+    "n": 4,
+    "index": 2,
+    "maxSum": 6,
+    "output": 2
+  }, {
+  "message": "Example 2",
+  "n": 6,
+  "index": 1,
+  "maxSum": 10,
+  "output": 3
+}
+]
