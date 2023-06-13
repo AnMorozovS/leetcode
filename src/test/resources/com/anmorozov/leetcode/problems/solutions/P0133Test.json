@@ -1,0 +1,15 @@
+[
+  {
+    "message": "Example 1",
+    "adjList": [[2, 4], [1, 3], [2, 4], [1, 3]],
+    "output": [[2, 4], [1, 3], [2, 4], [1, 3]]
+  }, {
+  "message": "Example 2",
+  "adjList": [[]],
+  "output": [[]]
+}, {
+  "message": "Example 3",
+  "adjList": [],
+  "output": []
+}
+]
