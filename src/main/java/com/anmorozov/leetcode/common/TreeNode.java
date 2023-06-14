@@ -7,6 +7,7 @@ import java.util.TreeMap;
 
 public class TreeNode {
 
+    public static final int NULL_FILLER = -1;
     public int value;
     public TreeNode left;
     public TreeNode right;
@@ -24,25 +25,25 @@ public class TreeNode {
         this.right = right;
     }
 
-    public static TreeNode convertFromArray(int[] array) {
-        if (array.length <= 0) {
+    public static TreeNode convertFromArray(List<Integer> array) {
+        if (array.size() <= 0) {
             return null;
         }
         List<TreeNode> parents = new ArrayList<>();
         List<TreeNode> children = new ArrayList<>();
-        TreeNode head = new TreeNode(array[0]);
+        TreeNode head = new TreeNode(array.get(0));
         TreeNode parent = head;
         parents.add(parent);
         TreeNode child;
         int parentIndex = 0;
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 1; i < array.size(); i++) {
             if (parentIndex >= parents.size() * 2) {
                 parents = children;
                 parentIndex = 0;
                 children = new ArrayList<>();
             }
-            if (array[i] != 0) {
-                child = new TreeNode(array[i]);
+            if (array.get(i) != NULL_FILLER) {
+                child = new TreeNode(array.get(i));
                 children.add(child);
                 parent = parents.get(parentIndex / 2);
                 if (parentIndex % 2 == 0) {

@@ -4,6 +4,7 @@ import com.anmorozov.leetcode.common.BaseTest;
 import com.anmorozov.leetcode.common.TreeNode;
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.IOException;
+import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -31,7 +32,7 @@ class P0098Test {
         assertEquals(output, actual);
     }
 
-    record SolutionRecord(String message, int[] input, boolean output) {
+    record SolutionRecord(String message, List<Integer> input, boolean output) {
 
         public static Arguments getArguments(SolutionRecord s) {
             return arguments(s.message, TreeNode.convertFromArray(s.input), s.output);
