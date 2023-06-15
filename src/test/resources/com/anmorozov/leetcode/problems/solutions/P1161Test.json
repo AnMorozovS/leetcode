@@ -1,0 +1,19 @@
+[
+  {
+    "message": "Example 1",
+    "input": [1, 7, 0, 7, -8, null, null],
+    "output": 2
+  }, {
+  "message": "Example 2",
+  "input": [989, null, 10250, 98693, -89388, null, null, null, -32127],
+  "output": 2
+}, {
+  "message": "Test 37",
+  "input": [-100, -200, -300, -20, -5, -10, null],
+  "output": 3
+}, {
+  "message": "Test 39",
+  "input": [1, 1, 0, 7, -8, -7, 9],
+  "output": 1
+}
+]

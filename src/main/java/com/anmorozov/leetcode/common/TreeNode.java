@@ -7,7 +7,6 @@ import java.util.TreeMap;
 
 public class TreeNode {
 
-    public static final int NULL_FILLER = -1;
     public int value;
     public TreeNode left;
     public TreeNode right;
@@ -42,7 +41,7 @@ public class TreeNode {
                 parentIndex = 0;
                 children = new ArrayList<>();
             }
-            if (array.get(i) != NULL_FILLER) {
+            if (array.get(i) != null) {
                 child = new TreeNode(array.get(i));
                 children.add(child);
                 parent = parents.get(parentIndex / 2);

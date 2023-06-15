@@ -5,7 +5,15 @@
     "output": 1
   }, {
   "message": "Example 2",
-  "input": [1, 0, 48, -1, -1, 12, 49],
+  "input": [1, 0, 48, null, null, 12, 49],
   "output": 1
+}, {
+  "message": "Test 28",
+  "input": [1, null, 5, 3],
+  "output": 2
+}, {
+  "message": "Test 128",
+  "input": [236, 104, 701, null, 227, null, 911],
+  "output": 9
 }
 ]
