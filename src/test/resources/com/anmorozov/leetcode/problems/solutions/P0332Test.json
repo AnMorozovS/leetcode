@@ -7,5 +7,13 @@
   "message": "Example 2",
   "tickets": [["JFK", "SFO"], ["JFK", "ATL"], ["SFO", "ATL"], ["ATL", "JFK"], ["ATL", "SFO"]],
   "output": ["JFK", "ATL", "JFK", "SFO", "ATL", "SFO"]
+}, {
+  "message": "Test 4",
+  "tickets": [["JFK", "KUL"], ["JFK", "NRT"], ["NRT", "JFK"]],
+  "output": ["JFK", "NRT", "JFK", "KUL"]
+}, {
+  "message": "Test 8",
+  "tickets": [["EZE", "AXA"], ["TIA", "ANU"], ["ANU", "JFK"], ["JFK", "ANU"], ["ANU", "EZE"], ["TIA", "ANU"], ["AXA", "TIA"], ["TIA", "JFK"], ["ANU", "TIA"], ["JFK", "TIA"]],
+  "output": ["JFK", "ANU", "EZE", "AXA", "TIA", "ANU", "JFK", "TIA", "ANU", "TIA", "JFK"]
 }
 ]
