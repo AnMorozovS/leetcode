@@ -1,4 +1,4 @@
-package com.anmorozov.leetcode.problems.solutions.p1027;
+package com.anmorozov.leetcode.problems.solutions.p1575;
 
 import com.anmorozov.leetcode.common.BaseTest;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -12,31 +12,30 @@ import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("1027. Longest Arithmetic Subsequence.")
+@DisplayName("1575. Count All Possible Routes")
 class SolutionTest {
 
-    @SuppressWarnings("SpellCheckingInspection")
-    static Stream<Arguments> longestArithSeqLength() throws IOException {
+    static Stream<Arguments> countRoutes() throws IOException {
         BaseTest<SolutionTest, SolutionRecord> baseTest = new BaseTest<>(
                 SolutionTest.class, new TypeReference<>() {
         }, SolutionRecord::getArguments);
         return baseTest.prepare().stream();
     }
 
-    @DisplayName("longestArithSeqLength")
-    @ParameterizedTest(name = "{0}: nums = {1}, output = {2}")
+    @DisplayName("countRoutes")
+    @ParameterizedTest(name = "{0}: locations = {1}, start = {2}, finish = {3}, fuel = {4}, output = {5}")
     @MethodSource
-    @SuppressWarnings("SpellCheckingInspection")
-    void longestArithSeqLength(String message, int[] nums, int output) {
-        Solution solution = new Approach1();
-        int actual = solution.longestArithSeqLength(nums);
+    void countRoutes(String message, int[] locations, int start, int finish, int fuel, int output) {
+        Solution solution = new MyApproach1();
+        int actual = solution.countRoutes(locations, start, finish, fuel);
         assertEquals(output, actual);
     }
 
-    record SolutionRecord(String message, int[] nums, int output) {
+    record SolutionRecord(String message, int[] locations, int start, int finish, int fuel, int output) {
 
-        public static Arguments getArguments(SolutionRecord s) {
-            return arguments(s.message, s.nums, s.output);
+        public static Arguments getArguments(
+                SolutionRecord s) {
+            return arguments(s.message, s.locations, s.start, s.finish, s.fuel, s.output);
         }
     }
 

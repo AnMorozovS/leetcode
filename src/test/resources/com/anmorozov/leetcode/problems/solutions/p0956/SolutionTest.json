@@ -1,0 +1,19 @@
+[
+  {
+    "message": "Example 1",
+    "rods": [1, 2, 3, 6],
+    "output": 6
+  }, {
+  "message": "Example 2",
+  "rods": [1, 2, 3, 4, 5, 6],
+  "output": 10
+}, {
+  "message": "Example 3",
+  "rods": [1, 2],
+  "output": 0
+}, {
+  "message": "Test 7",
+  "rods": [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 50, 50, 50, 150, 150, 150, 100, 100, 100, 123],
+  "output": 1023
+}
+]

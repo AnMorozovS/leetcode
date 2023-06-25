@@ -1,0 +1,24 @@
+[
+  {
+    "message": "Example 1",
+    "locations": [2, 3, 6, 8, 4],
+    "start": 1,
+    "finish": 3,
+    "fuel": 5,
+    "output": 4
+  }, {
+  "message": "Example 2",
+  "locations": [4, 3, 1],
+  "start": 1,
+  "finish": 0,
+  "fuel": 6,
+  "output": 5
+}, {
+  "message": "Example 3",
+  "locations": [5, 2, 1],
+  "start": 0,
+  "finish": 2,
+  "fuel": 3,
+  "output": 0
+}
+]
