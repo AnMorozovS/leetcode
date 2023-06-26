@@ -1,4 +1,4 @@
-package com.anmorozov.leetcode.problems.solutions.p1027;
+package com.anmorozov.leetcode.problems.solutions.p2462;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,7 +16,16 @@ public class BenchMarkTest {
         SolutionRecord solutionRecord = getSolutionRecord();
 
         Solution solution = new Approach1();
-        solution.longestArithSeqLength(solutionRecord.nums());
+        solution.totalCost(solutionRecord.costs(), solutionRecord.k(), solutionRecord.candidates());
+    }
+
+    @Benchmark
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    public void initApproach2() throws IOException {
+        SolutionRecord solutionRecord = getSolutionRecord();
+
+        Solution solution = new Approach2();
+        solution.totalCost(solutionRecord.costs(), solutionRecord.k(), solutionRecord.candidates());
     }
 
     @Benchmark
@@ -25,7 +34,7 @@ public class BenchMarkTest {
         SolutionRecord solutionRecord = getSolutionRecord();
 
         Solution solution = new MyApproach1();
-        solution.longestArithSeqLength(solutionRecord.nums());
+        solution.totalCost(solutionRecord.costs(), solutionRecord.k(), solutionRecord.candidates());
     }
 
     private SolutionRecord getSolutionRecord() throws IOException {

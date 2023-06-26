@@ -10,7 +10,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("1027. Longest Arithmetic Subsequence.")
 class SolutionTest {
@@ -31,13 +30,6 @@ class SolutionTest {
         Solution solution = new Approach1();
         int actual = solution.longestArithSeqLength(nums);
         assertEquals(output, actual);
-    }
-
-    record SolutionRecord(String message, int[] nums, int output) {
-
-        public static Arguments getArguments(SolutionRecord s) {
-            return arguments(s.message, s.nums, s.output);
-        }
     }
 
 }
