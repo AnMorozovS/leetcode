@@ -1,21 +1,17 @@
-package com.anmorozov.leetcode.problems.solutions;
+package com.anmorozov.leetcode.problems.solutions.p1971;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Deque;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class P1971 {
+public class MyApproach1 implements Solution {
 
+    @Override
     public boolean validPath(int n, int[][] edges, int source, int destination) {
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        for (int[] edge : edges) {
-            graph.computeIfAbsent(edge[0], x -> new ArrayList<>()).add(edge[1]);
-            graph.computeIfAbsent(edge[1], x -> new ArrayList<>()).add(edge[0]);
-        }
+        Map<Integer, List<Integer>> graph = getGraph(edges);
+
         Deque<Integer> stack = new ArrayDeque<>();
         stack.push(source);
         boolean[] seen = new boolean[n];

@@ -1,6 +1,6 @@
 package com.anmorozov.leetcode.common;
 
-import com.anmorozov.leetcode.problems.solutions.p1027.BenchMarkTest;
+import com.anmorozov.leetcode.problems.solutions.p1971.BenchMarkTest;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openjdk.jmh.annotations.Mode;
