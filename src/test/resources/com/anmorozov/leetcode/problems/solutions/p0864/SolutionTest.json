@@ -1,0 +1,19 @@
+[
+  {
+    "message": "Example 1",
+    "grid": ["@.a..", "###.#", "b.A.B"],
+    "output": 8
+  }, {
+  "message": "Example 2",
+  "grid": ["@..aA", "..B#.", "....b"],
+  "output": 6
+}, {
+  "message": "Example 3",
+  "grid": ["@Aa"],
+  "output": -1
+}, {
+  "message": "Test 6",
+  "grid": ["@...a", ".###A", "b.BCc"],
+  "output": 10
+}
+]
