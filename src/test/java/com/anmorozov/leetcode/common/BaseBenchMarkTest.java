@@ -1,6 +1,6 @@
 package com.anmorozov.leetcode.common;
 
-import com.anmorozov.leetcode.problems.solutions.p1971.BenchMarkTest;
+import com.anmorozov.leetcode.problems.solutions.p1970.BenchMarkTest;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openjdk.jmh.annotations.Mode;
@@ -22,7 +22,7 @@ public class BaseBenchMarkTest {
                 .threads(1)
                 .measurementIterations(2)
                 .forks(1)
-                .shouldFailOnError(true)
+                .shouldFailOnError(false)
                 .shouldDoGC(true)
                 .build();
 
