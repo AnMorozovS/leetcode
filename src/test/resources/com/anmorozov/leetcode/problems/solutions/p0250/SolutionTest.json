@@ -1,0 +1,15 @@
+[
+  {
+    "message": "Example 1",
+    "root": [5, 1, 5, 5, 5, null, 5],
+    "output": 4
+  }, {
+  "message": "Example 2",
+  "root": [],
+  "output": 0
+}, {
+  "message": "Example 3",
+  "root": [5, 5, 5, 5, 5, null, 5],
+  "output": 6
+}
+]
