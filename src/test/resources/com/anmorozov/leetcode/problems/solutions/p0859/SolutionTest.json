@@ -1,0 +1,28 @@
+[
+  {
+    "message": "Example 1",
+    "s": "ab",
+    "goal": "ba",
+    "output": true
+  }, {
+  "message": "Example 2",
+  "s": "ab",
+  "goal": "ab",
+  "output": false
+}, {
+  "message": "Example 3",
+  "s": "aa",
+  "goal": "aa",
+  "output": true
+}, {
+  "message": "Test 28",
+  "s": "abcaa",
+  "goal": "abcbb",
+  "output": false
+}, {
+  "message": "Test 34",
+  "s": "ab",
+  "goal": "ca",
+  "output": false
+}
+]
