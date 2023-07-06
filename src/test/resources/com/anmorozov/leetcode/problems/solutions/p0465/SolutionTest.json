@@ -1,0 +1,15 @@
+[
+  {
+    "message": "Example 1",
+    "transactions": [[0, 1, 10], [2, 0, 5]],
+    "output": 2
+  }, {
+  "message": "Example 2",
+  "transactions": [[0, 1, 10], [1, 0, 1], [1, 2, 5], [2, 0, 5]],
+  "output": 1
+}, {
+  "message": "Test 16",
+  "transactions": [[2, 0, 5], [3, 4, 4]],
+  "output": 2
+}
+]
