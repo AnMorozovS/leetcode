@@ -1,0 +1,33 @@
+[
+  {
+    "message": "Example 1",
+    "answerKey": "TTFF",
+    "k": 2,
+    "output": 4
+  }, {
+  "message": "Example 2",
+  "answerKey": "TFFT",
+  "k": 1,
+  "output": 3
+}, {
+  "message": "Example 2",
+  "answerKey": "TTFTTFTT",
+  "k": 1,
+  "output": 5
+}, {
+  "message": "Test 13",
+  "answerKey": "F",
+  "k": 1,
+  "output": 1
+}, {
+  "message": "Test 14",
+  "answerKey": "TF",
+  "k": 2,
+  "output": 2
+}, {
+  "message": "Test 16",
+  "answerKey": "FTFFTFTFTTFTTFTTFFTTFFTTTTTFTTTFTFFTTFFFFFTTTTFTTTTTTTTTFTTFFTTFTFFTTTFFFFFTTTFFTTTTFTFTFFTTFTTTTTTF",
+  "k": 32,
+  "output": 2
+}
+]
