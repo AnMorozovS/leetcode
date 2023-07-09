@@ -1,0 +1,15 @@
+[
+  {
+    "message": "Example 1",
+    "s": "aababbb",
+    "output": 3
+  }, {
+  "message": "Example 2",
+  "s": "abcde",
+  "output": 0
+}, {
+  "message": "Test 95",
+  "s": "srndawsjtkfjvkgrfqkovajfbvlhqpoxzmtffmlrwwevtixyksauepdilfyuabdundhlkrbmmeppxslyhnumekdqcsqpmlcjsyctqebxsbvpapbmlqhrddpdthaboqokljnlbtyaqpumlzncdjqazugsinxwhcmxvtuiclmjqcsbabuxadnivdvvrvxygxlrrlummxlnasjrkqbhtuutiakfkwmfbtoxqbzhhvdlkylxrtcfqgwhcxotklbvfpjmeshlxfzookpharvrgqmwodlhrwcoxgbkpkvxbdffczbqnjfvxyvijoiguvfjmadjphaworbwgmwiitphnaavpuywxepfdbygkbjiupvvpkdjfipjvrdtufofdyvzsecreyylsmxemucryrstlittgqpxaeurnxukramvoxfdqqtnwrmnxdxgcxwfsewgqbfoqjc",
+  "output": 18
+}
+]
