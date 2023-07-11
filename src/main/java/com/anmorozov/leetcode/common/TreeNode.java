@@ -57,6 +57,25 @@ public class TreeNode {
         return head;
     }
 
+    public TreeNode findByNumberUnsorted(int nodeNumber) {
+        int val = this.value;
+        if (val == nodeNumber) {
+            return this;
+        }
+        TreeNode result = null;
+        if (this.right != null) {
+            result = this.right.findByNumberUnsorted(nodeNumber);
+        }
+        if (result != null) {
+            return result;
+        }
+        if (this.left != null) {
+            result = this.left.findByNumberUnsorted(nodeNumber);
+        }
+        return result;
+    }
+
+
     public TreeNode findByNumber(int nodeNumber) {
         int val = this.value;
         if (val == nodeNumber) {
