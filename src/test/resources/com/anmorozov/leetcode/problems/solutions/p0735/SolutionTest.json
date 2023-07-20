@@ -1,0 +1,15 @@
+[
+  {
+    "message": "Example 1",
+    "asteroids": [5, 10, -5],
+    "output": [5, 10]
+  }, {
+  "message": "Example 2",
+  "asteroids": [8, -8],
+  "output": []
+}, {
+  "message": "Example 3",
+  "asteroids": [10, 2, -5],
+  "output": [10]
+}
+]
