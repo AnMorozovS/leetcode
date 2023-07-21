@@ -21,11 +21,20 @@ class SolutionTest {
         return baseTest.prepare().stream();
     }
 
-    @DisplayName("MyApproach1.minCostConnectPoints")
+    @DisplayName("My Approach 1: Kruskal's Algorithm")
+    @ParameterizedTest(name = "{0}: points = {1}, output = {2}")
+    @MethodSource("minCostConnectPoints")
+    void testMyApproach1(String message, int[][] points, int output) {
+        Solution solution = new MyApproach1();
+        int actual = solution.minCostConnectPoints(points);
+        assertEquals(output, actual, "Problem in " + solution.getClass().getSimpleName());
+    }
+
+    @DisplayName("My Approach 2: Prim's Algorithm")
     @ParameterizedTest(name = "{0}: points = {1}, output = {2}")
     @MethodSource("minCostConnectPoints")
     void testMyApproach2(String message, int[][] points, int output) {
-        Solution solution = new MyApproach1();
+        Solution solution = new MyApproach2();
         int actual = solution.minCostConnectPoints(points);
         assertEquals(output, actual, "Problem in " + solution.getClass().getSimpleName());
     }
