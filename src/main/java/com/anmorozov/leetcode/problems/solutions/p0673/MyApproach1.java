@@ -8,6 +8,7 @@ public class MyApproach1 implements Solution {
 
     @Override
     public int findNumberOfLIS(int[] nums) {
+
         SortedMap<Integer, SortedMap<Integer, Integer>> previousSizeCount = new TreeMap<>();
         int maxSize = 1;
         for (int num : nums) {
