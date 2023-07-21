@@ -11,7 +11,6 @@ public class MyApproach1 implements Solution {
     @Override
     public int minCostConnectPoints(int[][] points) {
         PriorityQueue<Edge> queue = new PriorityQueue<>();
-
         for (int i = 0; i < points.length; i++) {
             for (int j = i + 1; j < points.length; j++) {
                 queue.add(
@@ -32,5 +31,4 @@ public class MyApproach1 implements Solution {
         }
         return minimumCost;
     }
-
 }
