@@ -1,0 +1,19 @@
+[
+  {
+    "message": "Example 1",
+    "grid": [[2, 1, 1], [1, 1, 0], [0, 1, 1]],
+    "output": 4
+  }, {
+  "message": "Example 2",
+  "grid": [[2, 1, 1], [0, 1, 1], [1, 0, 1]],
+  "output": -1
+}, {
+  "message": "Example 3",
+  "grid": [[0, 2]],
+  "output": 0
+}, {
+  "message": "Test 259",
+  "grid": [[2, 2], [1, 1], [0, 0], [2, 0]],
+  "output": 1
+}
+]
