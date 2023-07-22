@@ -1,0 +1,24 @@
+[
+  {
+    "message": "Example 1",
+    "n": 3,
+    "k": 2,
+    "row": 0,
+    "column": 0,
+    "output": 0.06250
+  }, {
+  "message": "Example 2",
+  "n": 1,
+  "k": 0,
+  "row": 0,
+  "column": 0,
+  "output": 1.00000
+}, {
+  "message": "Test 11",
+  "n": 8,
+  "k": 30,
+  "row": 6,
+  "column": 4,
+  "output": 1.9052566298333648E-4
+}
+]
