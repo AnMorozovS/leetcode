@@ -1,9 +1,9 @@
 package com.anmorozov.leetcode.common;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.SortedMap;
-import java.util.TreeMap;
+import java.util.Queue;
 
 public class TreeNode {
 
@@ -57,95 +57,46 @@ public class TreeNode {
         return head;
     }
 
-    public TreeNode findByNumberUnsorted(int nodeNumber) {
+    public TreeNode findByNumber(int nodeNumber) {
         int val = this.value;
         if (val == nodeNumber) {
             return this;
         }
         TreeNode result = null;
         if (this.right != null) {
-            result = this.right.findByNumberUnsorted(nodeNumber);
+            result = this.right.findByNumber(nodeNumber);
         }
         if (result != null) {
             return result;
         }
         if (this.left != null) {
-            result = this.left.findByNumberUnsorted(nodeNumber);
+            result = this.left.findByNumber(nodeNumber);
         }
         return result;
     }
 
-
-    public TreeNode findByNumber(int nodeNumber) {
-        int val = this.value;
-        if (val == nodeNumber) {
-            return this;
-        } else if (val < nodeNumber) {
-            if (this.right == null) {
-                return null;
+    public static List<Integer> convertToArray(TreeNode root) {
+        List<Integer> array = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode current = queue.poll();
+            if (current != null) {
+                queue.add(current.left);
+                queue.add(current.right);
+                array.add(current.value);
             } else {
-                return this.right.findByNumber(nodeNumber);
-            }
-        } else {
-            if (this.left == null) {
-                return null;
-            } else {
-                return this.left.findByNumber(nodeNumber);
+                array.add(null);
             }
         }
-    }
-
-    @Override
-    public String toString() {
-        List<SortedMap<Integer, String>> finalList = new ArrayList<>();
-
-        addNodeToList(finalList, this, 0, 0);
-
-        StringBuilder buffer = new StringBuilder();
-
-        int maxLevel = finalList.size() - 1;
-
-        int maxLevelSize = ((Float) Math.scalb(1, maxLevel)).intValue();
-        for (int i = 0; i < finalList.size(); i++) {
-            buffer.append(" ".repeat(Math.max(0, maxLevel - i)));
-            SortedMap<Integer, String> map = finalList.get(i);
-            int currentPower = ((Float) Math.scalb(1, maxLevel - i)).intValue();
-            for (int j = 0; j < maxLevelSize; j++) {
-                int currentIndex = j / currentPower;
-                int mod = j % currentPower;
-                if (mod == 0) {
-                    buffer.append(map.getOrDefault(currentIndex, " "));
-                } else {
-                    buffer.append(" ");
-                }
-                buffer.append(" ");
+        int lastNotNull = 0;
+        for (int i = array.size() - 1; i >= 0; i--) {
+            if (array.get(i) != null) {
+                lastNotNull = i + 1;
+                break;
             }
-            buffer.append('\n');
         }
-        return buffer.toString();
+        return array.subList(0, lastNotNull);
     }
-
-    public void addNodeToList(List<SortedMap<Integer, String>> finalList, TreeNode head, int level, int number) {
-
-        SortedMap<Integer, String> map;
-        if (level >= finalList.size()) {
-            map = new TreeMap<>();
-            finalList.add(map);
-        } else {
-            map = finalList.get(level);
-        }
-        map.put(number, String.valueOf(head.value));
-        int nextLevel = level + 1;
-        if (head.left != null) {
-            int nextLevelNumber = number * 2;
-            addNodeToList(finalList, head.left, nextLevel, nextLevelNumber);
-        }
-        if (head.right != null) {
-            int nextLevelNumber = number * 2 + 1;
-            addNodeToList(finalList, head.right, nextLevel, nextLevelNumber);
-        }
-
-    }
-
 
 }
