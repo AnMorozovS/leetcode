@@ -1,7 +1,9 @@
 package com.anmorozov.leetcode.common;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class TreeNode {
 
@@ -72,4 +74,29 @@ public class TreeNode {
         }
         return result;
     }
+
+    public static List<Integer> convertToArray(TreeNode root) {
+        List<Integer> array = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode current = queue.poll();
+            if (current != null) {
+                queue.add(current.left);
+                queue.add(current.right);
+                array.add(current.value);
+            } else {
+                array.add(null);
+            }
+        }
+        int lastNotNull = 0;
+        for (int i = array.size() - 1; i >= 0; i--) {
+            if (array.get(i) != null) {
+                lastNotNull = i + 1;
+                break;
+            }
+        }
+        return array.subList(0, lastNotNull);
+    }
+
 }
