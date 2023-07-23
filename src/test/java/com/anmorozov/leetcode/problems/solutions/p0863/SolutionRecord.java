@@ -16,7 +16,7 @@ record SolutionRecord(String message, List<Integer> root, int target, int k, Sor
             throw new RuntimeException(
                     "Constraint : The number of nodes in the tree is in the range [1, 500] - violated.");
         }
-        TreeNode target = root.findByNumberUnsorted(s.target);
+        TreeNode target = root.findByNumber(s.target);
         String message = s.message + ": root = " + s.root + ", target = " + s.target;
         return arguments(message, root, target, s.k, s.output);
     }

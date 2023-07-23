@@ -1,11 +1,12 @@
-package com.anmorozov.leetcode.problems.solutions;
+package com.anmorozov.leetcode.problems.solutions.p0235;
 
 import com.anmorozov.leetcode.common.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class P0235 {
+public class MyApproach1 implements Solution {
 
+    @Override
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         List<TreeNode> pList = new ArrayList<>();
         if (!getParentNodes(root, p, pList)) {
