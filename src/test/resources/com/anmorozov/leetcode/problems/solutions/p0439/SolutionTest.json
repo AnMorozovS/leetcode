@@ -1,0 +1,27 @@
+[
+  {
+    "message": "Example 1",
+    "expression": "T?2:3",
+    "output": "2"
+  }, {
+  "message": "Example 2",
+  "expression": "F?1:T?4:5",
+  "output": "4"
+}, {
+  "message": "Example 3",
+  "expression": "T?T?F:5:3",
+  "output": "F"
+}, {
+  "message": "MyTest 1",
+  "expression": "F?5:F",
+  "output": "F"
+}, {
+  "message": "MyTest 2",
+  "expression": "F?5:F?4:3",
+  "output": "3"
+}, {
+  "message": "Test 30",
+  "expression": "F?T:F?T?1:2:F?3:4",
+  "output": "4"
+}
+]
