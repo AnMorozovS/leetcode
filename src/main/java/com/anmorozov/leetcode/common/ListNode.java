@@ -52,6 +52,12 @@ public class ListNode {
         return -1;
     }
 
+    /**
+     * <p>Use to create List node with all children from int array</p>
+     *
+     * @param nums array of children
+     * @return root ListNode
+     */
     public static ListNode createFromArray(int[] nums) {
         ListNode prevNode = null;
         ListNode headNode = null;

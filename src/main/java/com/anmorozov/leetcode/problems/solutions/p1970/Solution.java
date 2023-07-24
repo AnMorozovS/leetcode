@@ -6,7 +6,7 @@ package com.anmorozov.leetcode.problems.solutions.p1970;
 public interface Solution {
 
     /**
-     * p>There is a <strong>1-based</strong> binary matrix where {@code 0} represents land and {@code 1} represents
+     * <p>There is a <strong>1-based</strong> binary matrix where {@code 0} represents land and {@code 1} represents
      * water. You are given integers {@code row} and {@code col} representing the number of rows and columns in the
      * matrix, respectively.</p>
      *

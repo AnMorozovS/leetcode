@@ -1,6 +1,15 @@
 package com.anmorozov.leetcode.problems.solutions.p0050;
 
+/**
+ * Realisation of exponential power
+ */
 public class MyApproach1 implements Solution {
+
+    /**
+     * Empty instance
+     */
+    public MyApproach1() {
+    }
 
     @Override
     public double myPow(double x, int n) {

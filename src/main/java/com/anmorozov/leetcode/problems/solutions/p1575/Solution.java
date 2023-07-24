@@ -20,7 +20,7 @@ public interface Solution {
      * <strong>allowed</strong> to visit any city more than once (including {@code start} and {@code finish}).</p>
      *
      * <p>Return <em>the count of all possible routes from </em>{@code start} <em>to</em> {@code finish}. Since the
-     * answer may be too large, return it modulo {@code 10<sup>9</sup> + 7}.</p>
+     * answer may be too large, return it modulo {@code 10}<sup>9</sup>{@code  + 7}.</p>
      *
      * @param locations positive integers locations where {@code locations[i]} represents the position of city {@code
      * i}
@@ -28,7 +28,7 @@ public interface Solution {
      * @param finish ending city.
      * @param fuel the initial amount of fuel you have.
      * @return <em>the count of all possible routes from </em>{@code start} <em>to</em> {@code finish}. Since the answer
-     * may be too large, return it modulo {@code 10<sup>9</sup> + 7}.</p>
+     * may be too large, return it modulo {@code 10}<sup>9</sup>{@code  + 7}.
      */
     int countRoutes(int[] locations, int start, int finish, int fuel);
 }

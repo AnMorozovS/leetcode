@@ -7,7 +7,7 @@ public class Approach2 implements Solution {
 
     private final int[][] directions = new int[][] {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
-    public boolean canCross(int row, int col, int[][] cells, int day) {
+    private boolean canCross(int row, int col, int[][] cells, int day) {
         int[][] grid = new int[row][col];
         for (int i = 0; i < day; ++i) {
             int r = cells[i][0] - 1;

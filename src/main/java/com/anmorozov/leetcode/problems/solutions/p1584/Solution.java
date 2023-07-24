@@ -20,8 +20,8 @@ public interface Solution {
      * <p><strong>Constraints:</strong></p>
      *
      * <ul>
-     * 	<li>1 <= points.length <= 1000</li>
-     * 	<li>-10<sup>6</sup> <= x<sub>i</sub>, y<sub>i</sub> <= 10<sup>6</sup></li>
+     * 	<li>{@code 1 <= points.length <= 1000}</li>
+     * 	<li>{@code -10}<sup>6</sup>{@code  <= x}<sub>i</sub>{@code , y}<sub>i</sub>{@code  <= 10}<sup>6</sup></li>
      * 	<li>All pairs (x<sub>i</sub>, y<sub>i</sub>) are distinct.</li>
      * </ul>
      *

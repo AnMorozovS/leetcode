@@ -20,6 +20,7 @@ public interface Solution {
      * <ul>
      * 	<li>{@code 1 <= s.length <= 10}<sup>4</sup></li>
      * 	<li>{@code s} consists of lowercase English letters.</li>
+     * </ul>
      *
      * @param s s
      * @return 0

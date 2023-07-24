@@ -16,13 +16,12 @@ public interface Solution {
      * <p><b>Note:</b> You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before
      * you buy again).</p>
      *
-     * <p>Constraints:
-     * <ui>
+     * <p>Constraints:</p>
+     * <ul>
      * <li>{@code 1 <= prices.length <= 5 * 104}</li>
      * <li>{@code 1 <= prices[i] < 5 * 104}</li>
      * <li>{@code 0 <= fee < 5 * 104}</li>
-     * </ui>
-     * </p>
+     * </ul>
      *
      * @param prices {@code prices[i]} is the price of a given stock on the {@code i}<sup>th</sup> day
      * @param fee representing a transaction fee.
