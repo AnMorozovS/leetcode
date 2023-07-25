@@ -7,6 +7,12 @@ import com.anmorozov.leetcode.common.TreeNode;
  */
 public class MyApproach1 implements Solution {
 
+    /**
+     * Empty instance no storage values
+     */
+    public MyApproach1() {
+    }
+
     @Override
     public int minDepth(TreeNode root) {
         if (root == null) {

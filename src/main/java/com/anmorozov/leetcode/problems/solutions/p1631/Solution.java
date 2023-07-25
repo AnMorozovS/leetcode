@@ -31,8 +31,8 @@ public interface Solution {
      * <strong>up</strong>, <strong>down</strong>, <strong>left</strong>, or <strong>right</strong>, and you wish to
      * find a route that requires the minimum <strong>effort</strong>.</p>
      *
-     * <p>A route's <strong>effort</strong> is the <strong>maximum absolute difference</strong><strong> </strong>in
-     * heights between two consecutive cells of the route.</p>
+     * <p>A route's <strong>effort</strong> is the <strong>maximum absolute difference</strong>in heights between two
+     * consecutive cells of the route.</p>
      *
      * <p>Return <em>the minimum <strong>effort</strong> required to travel from the top-left cell to the bottom-right
      * cell.</em></p>

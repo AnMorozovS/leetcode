@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * <h3>2448. Minimum Cost to Make Array Equal.</h3>
- * Hard
+ * 2448. Minimum Cost to Make Array Equal.
  */
 public class P2448 {
 
@@ -13,19 +12,18 @@ public class P2448 {
      * <p>You are given two <b>0-indexed</b> arrays {@code nums} and {@code cost} consisting each of {@code n}
      * <b>positive</b> integers.</p>
      *
-     * <p>You can do the following operation <b>any</b> number of times:
-     * <ui>
+     * <p>You can do the following operation <b>any</b> number of times:</p>
+     * <ul>
      * <li>Increase or decrease <b>any</b> element of the array {@code nums} by {@code 1}.</li>
-     * </ui>
-     * The cost of doing one operation on the {@code i}<sup>th</sup> element is  {@code cost[i]}.</p>
+     * </ul>
+     * <p>The cost of doing one operation on the {@code i}<sup>th</sup> element is  {@code cost[i]}.</p>
      *
-     * <p>Constraints:
-     * <ui>
+     * <p>Constraints:</p>
+     * <ul>
      * <li>{@code n == nums.length == cost.length}</li>
      * <li>{@code 1 <= n <= 105}</li>
      * <li>{@code 1 <= nums[i], cost[i] <= 106}</li>
-     * </ui>
-     * </p>
+     * </ul>
      *
      * @param nums incoming array to change
      * @param cost array of cost to increase {@code nums[i]} by {@code 1}

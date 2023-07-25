@@ -18,7 +18,7 @@ public interface Solution {
      * </ul>
      *
      * @param nums a binary array
-     * @return the size of the longest non-empty subarray containing only </em>{@code 1}<em>'s in the resulting
+     * @return <em>the size of the longest non-empty subarray containing only </em>{@code 1}<em>'s in the resulting
      * array</em>. Return {@code 0} if there is no such subarray.
      */
     int longestSubarray(int[] nums);

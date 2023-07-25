@@ -7,13 +7,12 @@ package com.anmorozov.leetcode.problems.solutions.p0137;
 public interface Solution {
 
     /**
-     * p>Given an integer array  {@code nums} where every element appears <strong>three times</strong> except for one,
+     * <p>Given an integer array  {@code nums} where every element appears <strong>three times</strong> except for one,
      * which appears <strong>exactly once</strong>. <em>Find the single element and return it</em>.</p>
      *
      * <p>You must implement a solution with a linear runtime complexity and use only constant extra
      * space.</p>
      *
-     * <p> </p>
      * <p><strong>Constraints:</strong></p>
      *
      * <ul>

@@ -1,8 +1,7 @@
 package com.anmorozov.leetcode.problems.solutions;
 
 /**
- * <h3>2090. K Radius Subarray Averages.</h3>
- * <p>Medium</p>
+ * 2090. K Radius Subarray Averages.
  */
 public class P2090 {
 

@@ -1,8 +1,9 @@
 package com.anmorozov.leetcode.problems.solutions.p0146;
 
 /**
- * <p><b>146.</b> LRU Cache</p>
- * <i>Medium</i>
+ * 146. LRU Cache
+ *
+ * @param <T> use for different cache realisations
  */
 public interface Solution<T extends LRUCache> {
 
@@ -22,7 +23,6 @@ public interface Solution<T extends LRUCache> {
      *
      * <p>The functions {@code get} and {@code put} must each run in {@code O(1)} average time complexity.</p>
      *
-     * <p>&nbsp;</p>
      * <p><strong>Constraints:</strong></p>
      *
      * <ul>
