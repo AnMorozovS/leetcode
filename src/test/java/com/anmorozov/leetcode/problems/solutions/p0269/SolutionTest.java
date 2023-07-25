@@ -24,7 +24,7 @@ class SolutionTest {
     @DisplayName("MyApproach1")
     @ParameterizedTest(name = "{0}: words = {1}, output = {2}")
     @MethodSource("alienOrder")
-    void alienOrder(String message, String[] words, String output) {
+    void testMyApproach1(String message, String[] words, String output) {
         Solution solution = new MyApproach1();
         String actual = solution.alienOrder(words);
         assertEquals(output, actual);
