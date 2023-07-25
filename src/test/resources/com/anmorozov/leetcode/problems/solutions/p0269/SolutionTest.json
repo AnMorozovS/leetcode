@@ -1,0 +1,35 @@
+[
+  {
+    "message": "Example 1",
+    "words": ["wrt", "wrf", "er", "ett", "rftt"],
+    "output": "wertf"
+  }, {
+  "message": "Example 2",
+  "words": ["z", "x"],
+  "output": "zx"
+}, {
+  "message": "Example 3",
+  "words": ["z", "x", "z"],
+  "output": ""
+}, {
+  "message": "Test 88",
+  "words": ["ab", "adc"],
+  "output": "abcd"
+}, {
+  "message": "Test 96",
+  "words": ["ac", "ab", "zc", "zb"],
+  "output": "acbz"
+}, {
+  "message": "Test 119",
+  "words": ["abc", "ab"],
+  "output": ""
+}, {
+  "message": "Test 122",
+  "words": ["wnlb"],
+  "output": "blnw"
+}, {
+  "message": "Test 126",
+  "words": ["aba"],
+  "output": "ab"
+}
+]
