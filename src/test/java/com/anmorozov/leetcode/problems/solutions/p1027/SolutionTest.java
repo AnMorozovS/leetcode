@@ -22,11 +22,11 @@ class SolutionTest {
         return baseTest.prepare().stream();
     }
 
-    @DisplayName("longestArithSeqLength")
-    @ParameterizedTest(name = "{0}: nums = {1}, output = {2}")
-    @MethodSource
     @SuppressWarnings("SpellCheckingInspection")
-    void longestArithSeqLength(String message, int[] nums, int output) {
+    @DisplayName("Approach 1")
+    @ParameterizedTest(name = "{0}: nums = {1}, output = {2}")
+    @MethodSource("longestArithSeqLength")
+    void testApproach1(String message, int[] nums, int output) {
         Solution solution = new Approach1();
         int actual = solution.longestArithSeqLength(nums);
         assertEquals(output, actual);
