@@ -1,0 +1,19 @@
+[
+  {
+    "message": "Example 1",
+    "arr": [0, 1, 0],
+    "output": 1
+  }, {
+  "message": "Example 2",
+  "arr": [0, 2, 1, 0],
+  "output": 1
+}, {
+  "message": "Example 3",
+  "arr": [0, 10, 5, 2],
+  "output": 1
+}, {
+  "message": "My Test 1",
+  "arr": [0, 1, 2, 3, 4, 5, 10, 2],
+  "output": 6
+}
+]
