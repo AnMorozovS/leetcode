@@ -25,9 +25,9 @@ public class MyApproach1 implements Solution {
             courseRequirement.computeIfAbsent(advanceCourse, HashSet::new).add(coreCourse);
         }
         Queue<Integer> availableCourses = new PriorityQueue<>();
-        for (int i = 0; i < numCourses; i++) {
-            if (!courseRequirement.containsKey(i)) {
-                availableCourses.add(i);
+        for (int courseIndex = 0; courseIndex < numCourses; courseIndex++) {
+            if (!courseRequirement.containsKey(courseIndex)) {
+                availableCourses.add(courseIndex);
             }
         }
         Set<Integer> passedCourses = new HashSet<>();
