@@ -5,12 +5,6 @@ package com.anmorozov.leetcode.problems.solutions.p0050;
  */
 public class MyApproach1 implements Solution {
 
-    /**
-     * Empty instance
-     */
-    public MyApproach1() {
-    }
-
     @Override
     public double myPow(double x, int n) {
         return binaryExp(x, n);
