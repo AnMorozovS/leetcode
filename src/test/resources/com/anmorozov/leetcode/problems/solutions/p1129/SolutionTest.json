@@ -1,0 +1,27 @@
+[
+  {
+    "message": "Example 1",
+    "n": 3,
+    "redEdges": [[0, 1], [1, 2]],
+    "blueEdges": [],
+    "output": [0, 1, -1]
+  }, {
+  "message": "Example 2",
+  "n": 3,
+  "redEdges": [[0, 1]],
+  "blueEdges": [[2, 1]],
+  "output": [0, 1, -1]
+}, {
+  "message": "Test 25",
+  "n": 3,
+  "redEdges": [[0, 1]],
+  "blueEdges": [[1, 2]],
+  "output": [0, 1, 2]
+}, {
+  "message": "Test 57",
+  "n": 5,
+  "redEdges": [[0, 1], [1, 2], [2, 3], [3, 4]],
+  "blueEdges": [[1, 2], [2, 3], [3, 1]],
+  "output": [0, 1, 2, 3, 7]
+}
+]
