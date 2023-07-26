@@ -1,13 +1,10 @@
 package com.anmorozov.leetcode.problems.solutions.p1466;
 
+import com.anmorozov.leetcode.common.QueueWithMemory;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
 
 import static com.anmorozov.leetcode.problems.solutions.p1466.Direction.BACKWARD;
 import static com.anmorozov.leetcode.problems.solutions.p1466.Direction.FORWARD;
@@ -24,20 +21,13 @@ public class MyApproach1 implements Solution {
             cityRoads.computeIfAbsent(connection[0], k -> new ArrayList<>()).add(new Path(connection[1], FORWARD));
             cityRoads.computeIfAbsent(connection[1], k -> new ArrayList<>()).add(new Path(connection[0], BACKWARD));
         }
-        Queue<Integer> actualCities = new LinkedList<>();
-        actualCities.offer(0);
-        Set<Integer> visitedCities = new HashSet<>();
-        visitedCities.add(0);
+        QueueWithMemory<Path, Integer> actualCities = new QueueWithMemory<>(new Path(0, FORWARD), Path::city);
         int roadsNeedToChange = 0;
         while (!actualCities.isEmpty()) {
-            int city = actualCities.poll();
-            for (Path neighbor : cityRoads.get(city)) {
-                if (!visitedCities.contains(neighbor.city())) {
-                    roadsNeedToChange += neighbor.direction().getSign();
-                    actualCities.offer(neighbor.city());
-                    visitedCities.add(neighbor.city());
-                }
-            }
+            roadsNeedToChange += cityRoads.get(actualCities.poll().city()).stream()
+                    .filter(actualCities::offer)
+                    .filter(x -> x.direction() == FORWARD)
+                    .count();
         }
         return roadsNeedToChange;
     }

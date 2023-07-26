@@ -6,7 +6,7 @@ import javafx.util.Pair;
 
 public class P1396 {
 
-    class UndergroundSystem {
+    static class UndergroundSystem {
 
         private final Map<String, Pair<Double, Double>> journeyData = new HashMap<>();
         private final Map<Integer, Pair<String, Integer>> checkInData = new HashMap<>();
@@ -21,7 +21,7 @@ public class P1396 {
         public void checkOut(int id, String stationName, int t) {
             // Look up the check in station and check in time for this id.
             // You could combine this "unpacking" into the other lines of code
-            // to have less lines of code overall, but we've chosen to be verbose
+            // to have fewer lines of code overall, but we've chosen to be verbose
             // here to make it easy for all learners to follow.
             Pair<String, Integer> checkInDataForId = checkInData.get(id);
             String startStation = checkInDataForId.getKey();
@@ -55,7 +55,6 @@ public class P1396 {
             return startStation + "->" + endStation;
         }
     }
-
 
 
 }

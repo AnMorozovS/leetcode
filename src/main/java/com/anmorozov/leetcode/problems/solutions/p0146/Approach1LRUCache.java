@@ -8,10 +8,10 @@ import java.util.Map;
  */
 public class Approach1LRUCache extends LRUCache {
 
-    int capacity;
-    Map<Integer, ListNode> dictionary;
-    ListNode head;
-    ListNode tail;
+    final int capacity;
+    final Map<Integer, ListNode> dictionary;
+    final ListNode head;
+    final ListNode tail;
 
     public Approach1LRUCache(int capacity) {
         this.capacity = capacity;
@@ -73,11 +73,11 @@ public class Approach1LRUCache extends LRUCache {
         /**
          * @noinspection FieldNamingConvention
          */
-        int key;
+        final int key;
         /**
          * @noinspection FieldNamingConvention
          */
-        int val;
+        final int val;
         ListNode next;
         ListNode prev;
 
