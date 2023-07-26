@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class MyLRUCache extends LRUCache {
 
-    LinkedHashMap<Integer, Integer> dictionary;
+    final LinkedHashMap<Integer, Integer> dictionary;
 
     public MyLRUCache(int capacity) {
         dictionary = new LinkedHashMap<>(5, 0.75f, true) {

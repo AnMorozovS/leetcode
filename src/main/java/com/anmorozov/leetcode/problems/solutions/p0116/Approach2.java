@@ -9,7 +9,7 @@ public class Approach2 implements Solution {
     public Node connect(Node root) {
 
         if (root == null) {
-            return root;
+            return null;
         }
 
         // Start with the root node. There are no next pointers

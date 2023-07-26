@@ -38,13 +38,11 @@ public class MyApproach3 implements Solution {
                 if (price >= lastMax) {
                     if (price - lastMax > price - lastMin - fee) {
                         result = result + price - lastMax;
-                        lastMax = price;
-                        justGrow = true;
                     } else {
                         result = result + price - lastMin - fee;
-                        lastMax = price;
-                        justGrow = true;
                     }
+                    lastMax = price;
+                    justGrow = true;
                 } else {
                     if (price >= lastMin) {
                         if (price - lastMin - fee >= 0) {

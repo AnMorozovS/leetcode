@@ -50,7 +50,7 @@ public class Approach4 implements Solution {
 
     static class TreeNode<T> {
 
-        T value;
+        final T value;
         TreeNode<T> left;
         TreeNode<T> right;
 

@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 class DisjointSetUnion {
 
-    int[] root;
-    int[] size;
+    final int[] root;
+    final int[] size;
 
     public DisjointSetUnion(int n) {
         root = new int[n];

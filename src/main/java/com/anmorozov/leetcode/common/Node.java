@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Node {
 
-    public int value;
-    public List<Node> children;
+    public final int value;
+    public final List<Node> children;
 
     public Node(int value, List<Node> children) {
         this.value = value;

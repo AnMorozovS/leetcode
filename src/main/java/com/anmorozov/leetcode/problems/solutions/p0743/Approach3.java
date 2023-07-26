@@ -17,7 +17,7 @@ public class Approach3 implements Solution {
 
 
     // Adjacency list
-    Map<Integer, List<Pair<Integer, Integer>>> connectionsWithDelays = new HashMap<>();
+    final Map<Integer, List<Pair<Integer, Integer>>> connectionsWithDelays = new HashMap<>();
 
     private void dijkstra(int[] signalReceivedAt, int source) {
         Queue<Pair<Integer, Integer>> pq = new PriorityQueue<>

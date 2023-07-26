@@ -13,7 +13,7 @@ public class P0133 {
 
     public Node cloneGraph(Node node) {
         if (node == null) {
-            return node;
+            return null;
         }
 
         // Hash map to save the visited node and it's respective clone
@@ -49,8 +49,8 @@ public class P0133 {
 
     public static class Node {
 
-        public int value;
-        public List<Node> neighbors;
+        public final int value;
+        public final List<Node> neighbors;
 
         public Node() {
             value = 0;
