@@ -1,0 +1,19 @@
+[
+  {
+    "message": "Example 1",
+    "input": "{}[]()",
+    "output": true
+  }, {
+  "message": "Example 2",
+  "input": "({)}",
+  "output": false
+}, {
+  "message": "Example 3",
+  "input": "(   {)   }",
+  "output": false
+}, {
+  "message": "Example 4",
+  "input": "[()](",
+  "output": false
+}
+]
