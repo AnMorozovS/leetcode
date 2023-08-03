@@ -1,0 +1,43 @@
+[
+  {
+    "message": "Example 1",
+    "digits": "23",
+    "output": ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
+  }, {
+  "message": "Example 2",
+  "digits": "",
+  "output": []
+}, {
+  "message": "Example 3",
+  "digits": "2",
+  "output": ["a", "b", "c"]
+}, {
+  "message": "My test 1",
+  "digits": "4",
+  "output": ["g", "h", "i"]
+}, {
+  "message": "My test 2",
+  "digits": "5",
+  "output": ["j", "k", "l"]
+}, {
+  "message": "My test 3",
+  "digits": "6",
+  "output": ["m", "n", "o"]
+}, {
+  "message": "My test 4",
+  "digits": "7",
+  "output": ["p", "q", "r", "s"]
+}, {
+  "message": "My test 5",
+  "digits": "8",
+  "output": ["t", "u", "v"]
+}, {
+  "message": "My test 6",
+  "digits": "9",
+  "output": ["w", "x", "y", "z"]
+}, {
+  "message": "My test 7",
+  "digits": "1",
+  "output": []
+}
+]
