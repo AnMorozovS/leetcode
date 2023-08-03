@@ -1,0 +1,11 @@
+[
+  {
+    "message": "Example 1",
+    "input": ["a", "c", "az"],
+    "output": ["a", "az", "c"]
+  }, {
+  "message": "Example 2",
+  "input": ["c", "ae", "az"],
+  "output": ["ae", "az", "c"]
+}
+]
