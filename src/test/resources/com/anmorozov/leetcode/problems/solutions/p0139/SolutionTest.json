@@ -1,0 +1,33 @@
+[
+  {
+    "message": "Example 1",
+    "s": "leetcode",
+    "wordDict": ["leet", "code"],
+    "output": true
+  }, {
+  "message": "Example 2",
+  "s": "applepenapple",
+  "wordDict": ["apple", "pen"],
+  "output": true
+}, {
+  "message": "Example 3",
+  "s": "catsandog",
+  "wordDict": ["cats", "dog", "sand", "and", "cat"],
+  "output": false
+}, {
+  "message": "Test 35",
+  "s": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+  "wordDict": ["a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"],
+  "output": false
+}, {
+  "message": "Test 38",
+  "s": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "wordDict": ["aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa", "ba"],
+  "output": false
+}, {
+  "message": "Test 7",
+  "s": "abcd",
+  "wordDict": ["a", "abc", "b", "cd"],
+  "output": true
+}
+]
