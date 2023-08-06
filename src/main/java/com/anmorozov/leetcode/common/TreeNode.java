@@ -3,6 +3,7 @@ package com.anmorozov.leetcode.common;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Queue;
 
 public class TreeNode {
@@ -97,6 +98,26 @@ public class TreeNode {
             }
         }
         return array.subList(0, lastNotNull);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        TreeNode treeNode = (TreeNode) o;
+
+        if (value != treeNode.value) {
+            return false;
+        }
+        if (!Objects.equals(left, treeNode.left)) {
+            return false;
+        }
+        return Objects.equals(right, treeNode.right);
     }
 
 }
