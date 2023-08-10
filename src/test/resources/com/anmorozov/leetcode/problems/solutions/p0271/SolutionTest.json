@@ -1,0 +1,15 @@
+[
+  {
+    "message": "Example 1",
+    "dummy_input": ["Hello", "World"],
+    "output": ["Hello", "World"]
+  }, {
+  "message": "Example 2",
+  "dummy_input": [""],
+  "output": [""]
+}, {
+  "message": "Test 68",
+  "dummy_input": ["", ""],
+  "output": ["", ""]
+}
+]
