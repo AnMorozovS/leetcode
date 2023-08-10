@@ -1,0 +1,33 @@
+[
+  {
+    "message": "Example 1",
+    "nums": [2, 5, 6, 0, 0, 1, 2],
+    "target": 0,
+    "output": true
+  }, {
+  "message": "Example 2",
+  "nums": [2, 5, 6, 0, 0, 1, 2],
+  "target": 3,
+  "output": false
+}, {
+  "message": "My Test 1",
+  "nums": [],
+  "target": 3,
+  "output": false
+}, {
+  "message": "My Test 2",
+  "nums": [5, 6, 7, 0, 1, 2, 3, 4],
+  "target": 3,
+  "output": true
+}, {
+  "message": "My Test 3",
+  "nums": [7, 8, 9, 0, 1, 2, 3, 4, 5],
+  "target": 8,
+  "output": true
+}, {
+  "message": "Test 23",
+  "nums": [1, 2, 1],
+  "target": 0,
+  "output": false
+}
+]
