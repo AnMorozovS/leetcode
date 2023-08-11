@@ -1,9 +1,10 @@
-package com.anmorozov.leetcode.problems.solutions;
+package com.anmorozov.leetcode.problems.solutions.p0142;
 
 import com.anmorozov.leetcode.common.ListNode;
 
-public class P0142 {
+public class MyApproach1 implements Solution {
 
+    @Override
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
