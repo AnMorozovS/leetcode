@@ -1,9 +1,10 @@
-package com.anmorozov.leetcode.problems.solutions;
+package com.anmorozov.leetcode.problems.solutions.p0876;
 
 import com.anmorozov.leetcode.common.ListNode;
 
-public class P0876 {
+public class MyApproach1 implements Solution {
 
+    @Override
     public ListNode middleNode(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;

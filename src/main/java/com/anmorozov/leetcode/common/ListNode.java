@@ -1,5 +1,7 @@
 package com.anmorozov.leetcode.common;
 
+import java.util.Objects;
+
 /**
  * Definition for singly-linked list.
  */
@@ -8,17 +10,10 @@ public class ListNode {
     public int value;
     public ListNode next;
 
-    public ListNode() {
-    }
-
     public ListNode(int val) {
         this.value = val;
     }
 
-    public ListNode(int val, ListNode next) {
-        this.value = val;
-        this.next = next;
-    }
 
     public static ListNode addCycleToEnd(ListNode head, int lastNodeIndex) {
         ListNode savedNode = null;
@@ -35,21 +30,6 @@ public class ListNode {
             currentNode.next = savedNode;
         }
         return head;
-    }
-
-    public static int getIndex(ListNode head, ListNode neededNode) {
-        ListNode currentNode = head;
-        int i = 0;
-        if (currentNode != null) {
-            while (currentNode.next != null) {
-                if (neededNode == currentNode) {
-                    return i;
-                }
-                i++;
-                currentNode = currentNode.next;
-            }
-        }
-        return -1;
     }
 
     /**
@@ -74,6 +54,21 @@ public class ListNode {
         return headNode;
     }
 
+    public ListNode getByIndex(int index) {
+        int i = 0;
+        ListNode result = this;
+
+        do {
+            if (index == i) {
+                return result;
+            }
+            i++;
+            result = result.next;
+        } while (this.next != null || i < index);
+        return null;
+
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -88,27 +83,6 @@ public class ListNode {
         if (value != listNode.value) {
             return false;
         }
-        if (this.next == null && listNode.next == null) {
-            return true;
-        } else if (this.next == null) {
-            return false;
-        } else if (listNode.next == null) {
-            return false;
-        } else {
-            return this.next.value == listNode.next.value;
-        }
-    }
-
-    @Override
-    public int hashCode() {
-        int result = value;
-        result = 31 * result + (next != null ? next.value : 0);
-        return result;
-    }
-
-    @Override
-    public String toString() {
-
-        return "" + value + (next != null ? ", " + next.value : "");
+        return Objects.equals(next, listNode.next);
     }
 }
