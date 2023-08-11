@@ -16,27 +16,24 @@ public interface Solution {
      *
      * <p>Machine 1 (sender) has the function:</p>
      *
-     * <pre>string encode(vector<string> strings) {
+     * {@code string encode(vector<string> strings) {
      *   // ... your code
      *   return encoded_string;
-     * }</pre>
-     * Machine 2 (receiver) has the function:
+     * }}
+     * <p>Machine 2 (receiver) has the function:</p>
      *
-     * <pre>vector<string> decode(string s) {
+     * {@code vector<string> decode(string s) {
      *   //... your code
      *   return strings;
-     * }
-     * </pre>
+     * }}
      *
      * <p>So Machine 1 does:</p>
      *
-     * <pre>string encoded_string = encode(strings);
-     * </pre>
+     * {@code string encoded_string = encode(strings);}
      *
      * <p>and Machine 2 does:</p>
      *
-     * <pre>vector< string > strings2 = decode(encoded_string);
-     * </pre>
+     * {@code vector< string > strings2 = decode(encoded_string);}
      *
      * <p>{@code strings2} in Machine 2 should be the same as {@code strings} in Machine 1.</p>
      *

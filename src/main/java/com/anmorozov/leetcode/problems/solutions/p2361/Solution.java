@@ -42,7 +42,7 @@ public interface Solution {
      * @param regular costs array
      * @param express costs array
      * @param expressCost to switch route
-     * @return em>a <strong>1-indexed</strong> array </em>{@code costs}<em> of length </em>{@code n}<em>, where
+     * @return <em>a <strong>1-indexed</strong> array </em>{@code costs}<em> of length </em>{@code n}<em>, where
      * </em>{@code costs[i]}<em> is the <strong>minimum</strong> cost to reach stop </em>{@code i}<em> from stop
      * </em>{@code 0}
      */
