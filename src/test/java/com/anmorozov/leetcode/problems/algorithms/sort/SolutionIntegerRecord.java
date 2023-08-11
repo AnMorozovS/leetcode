@@ -1,4 +1,4 @@
-package com.anmorozov.leetcode.problems.algorithms.selctionsort;
+package com.anmorozov.leetcode.problems.algorithms.sort;
 
 import java.util.List;
 import org.junit.jupiter.params.provider.Arguments;

@@ -1,9 +1,9 @@
-package com.anmorozov.leetcode.problems.algorithms.selctionsort;
+package com.anmorozov.leetcode.problems.algorithms.sort;
 
 import java.util.Arrays;
 import java.util.Collection;
 
-public class SelectionSort<T extends Comparable<T>> {
+public class SelectionSort<T extends Comparable<T>> implements Sort<T> {
 
     T[] instance;
 
@@ -11,7 +11,8 @@ public class SelectionSort<T extends Comparable<T>> {
         this.instance = instance;
     }
 
-    public Collection<T> selectionSort(Collection<T> arr) {
+    @Override
+    public Collection<T> sort(Collection<T> arr) {
         T[] array = arr.toArray(instance);
 
         // Mutates arr so that it is sorted via selecting the minimum element and
