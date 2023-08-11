@@ -1,0 +1,33 @@
+[
+  {
+    "message": "My test 1",
+    "amount": 3,
+    "coins": [1, 2],
+    "output": 2
+  }, {
+  "message": "Example 1",
+  "amount": 5,
+  "coins": [1, 2, 5],
+  "output": 4
+}, {
+  "message": "Example 2",
+  "amount": 3,
+  "coins": [2],
+  "output": 0
+}, {
+  "message": "Example 3",
+  "amount": 10,
+  "coins": [10],
+  "output": 1
+}, {
+  "message": "Test 14",
+  "amount": 500,
+  "coins": [3, 5, 7, 8, 9, 10, 11],
+  "output": 35502874
+}, {
+  "message": "Test 25",
+  "amount": 0,
+  "coins": [7],
+  "output": 1
+}
+]
