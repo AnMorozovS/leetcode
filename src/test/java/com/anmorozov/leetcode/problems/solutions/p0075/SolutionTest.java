@@ -20,12 +20,20 @@ class SolutionTest {
         }, SolutionRecord::getArguments);
         return baseTest.prepare().stream();
     }
-
     @DisplayName("My Approach 1 : Selection Sort")
     @ParameterizedTest(name = "{0}, nums = {1}, output = {2}")
     @MethodSource("sortColors")
     void testMyApproach1(String ignoredMessage, int[] nums, int[] output) {
         Solution solution = new MyApproach1();
+        int[] actual = solution.sortColors(nums);
+        assertArrayEquals(output, actual, "Problem in " + solution.getClass().getSimpleName());
+    }
+
+    @DisplayName("My Approach 2 : Selection Sort")
+    @ParameterizedTest(name = "{0}, nums = {1}, output = {2}")
+    @MethodSource("sortColors")
+    void testMyApproach2(String ignoredMessage, int[] nums, int[] output) {
+        Solution solution = new MyApproach2();
         int[] actual = solution.sortColors(nums);
         assertArrayEquals(output, actual, "Problem in " + solution.getClass().getSimpleName());
     }
