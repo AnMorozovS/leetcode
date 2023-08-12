@@ -1,4 +1,4 @@
-package com.anmorozov.leetcode.problems.algorithms.sort;
+package com.anmorozov.leetcode.problems.algorithms.sort.comparison;
 
 import com.anmorozov.leetcode.common.BaseTest;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -13,13 +13,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Comparison based sorts.")
-class SortTest {
+class ComparisonSortTest {
 
     static Stream<Arguments> sort() throws IOException {
-        BaseTest<SortTest, SolutionIntegerRecord> baseTestInteger = new BaseTest<>(SortTest.class,
+        BaseTest<ComparisonSortTest, SolutionIntegerRecord> baseTestInteger = new BaseTest<>(ComparisonSortTest.class,
                 new TypeReference<>() {
                 }, SolutionIntegerRecord::getArguments, "Integer");
-        BaseTest<SortTest, SolutionStringRecord> baseTestString = new BaseTest<>(SortTest.class, new TypeReference<>() {
+        BaseTest<ComparisonSortTest, SolutionStringRecord> baseTestString = new BaseTest<>(ComparisonSortTest.class,
+                new TypeReference<>() {
         }, SolutionStringRecord::getArguments, "String");
         return Stream.concat(baseTestInteger.prepare().stream(), baseTestString.prepare().stream());
     }
@@ -29,8 +30,8 @@ class SortTest {
     @MethodSource("sort")
     <T extends Comparable<T>> void testSelectionSort(String ignoredMessage, Collection<T> input, T[] instance,
                                                      Collection<T> output) {
-        Sort<T> sort = new SelectionSort<>(instance);
-        Collection<T> actual = sort.sort(input);
+        ComparisonSort<T> comparisonSort = new SelectionSort<>(instance);
+        Collection<T> actual = comparisonSort.sort(input);
         assertEquals(output, actual);
     }
 
@@ -39,8 +40,8 @@ class SortTest {
     @MethodSource("sort")
     <T extends Comparable<T>> void testBubbleSort(String ignoredMessage, Collection<T> input, T[] instance,
                                                   Collection<T> output) {
-        Sort<T> sort = new BubbleSort<>(instance);
-        Collection<T> actual = sort.sort(input);
+        ComparisonSort<T> comparisonSort = new BubbleSort<>(instance);
+        Collection<T> actual = comparisonSort.sort(input);
         assertEquals(output, actual);
     }
 
@@ -49,8 +50,8 @@ class SortTest {
     @MethodSource("sort")
     <T extends Comparable<T>> void testInsertionSort(String ignoredMessage, Collection<T> input, T[] instance,
                                                      Collection<T> output) {
-        Sort<T> sort = new InsertionSort<>(instance);
-        Collection<T> actual = sort.sort(input);
+        ComparisonSort<T> comparisonSort = new InsertionSort<>(instance);
+        Collection<T> actual = comparisonSort.sort(input);
         assertEquals(output, actual);
     }
 
@@ -59,8 +60,8 @@ class SortTest {
     @MethodSource("sort")
     <T extends Comparable<T>> void testHeapSort(String ignoredMessage, Collection<T> input, T[] instance,
                                                 Collection<T> output) {
-        Sort<T> sort = new HeapSort<>(instance);
-        Collection<T> actual = sort.sort(input);
+        ComparisonSort<T> comparisonSort = new HeapSort<>(instance);
+        Collection<T> actual = comparisonSort.sort(input);
         assertEquals(output, actual);
     }
 }

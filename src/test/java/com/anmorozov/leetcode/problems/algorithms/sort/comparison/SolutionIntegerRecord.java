@@ -1,11 +1,11 @@
-package com.anmorozov.leetcode.problems.algorithms.sort;
+package com.anmorozov.leetcode.problems.algorithms.sort.comparison;
 
 import java.util.List;
 import org.junit.jupiter.params.provider.Arguments;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-record SolutionIntegerRecord(String message, List<Integer> input, List<Integer> output) {
+public record SolutionIntegerRecord(String message, List<Integer> input, List<Integer> output) {
 
     public static Arguments getArguments(SolutionIntegerRecord s) {
 

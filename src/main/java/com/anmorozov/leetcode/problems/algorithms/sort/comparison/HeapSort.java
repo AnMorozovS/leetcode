@@ -1,9 +1,9 @@
-package com.anmorozov.leetcode.problems.algorithms.sort;
+package com.anmorozov.leetcode.problems.algorithms.sort.comparison;
 
 import java.util.Arrays;
 import java.util.Collection;
 
-public class HeapSort<T extends Comparable<T>> implements Sort<T> {
+public class HeapSort<T extends Comparable<T>> implements ComparisonSort<T> {
 
     T[] instance;
 

@@ -1,6 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions.p0912;
 
-import com.anmorozov.leetcode.problems.algorithms.sort.HeapSort;
+import com.anmorozov.leetcode.problems.algorithms.sort.comparison.HeapSort;
 
 /**
  * My Approach 1 : Heap Sort
