@@ -40,5 +40,14 @@ class NonComparisonSortTest {
         assertArrayEquals(output, input);
     }
 
+    @DisplayName("Bucket sort")
+    @ParameterizedTest(name = "{0}, input = {1}, output = {2}")
+    @MethodSource("sort")
+    public void testBucketSort(String ignoredMessage, int[] input, int[] output) {
+        NonComparisonSort nonComparisonSort = new BucketSort(5);
+        nonComparisonSort.sort(input);
+        assertArrayEquals(output, input);
+    }
+
 
 }
