@@ -15,9 +15,10 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 class NonComparisonSortTest {
 
     static Stream<Arguments> sort() throws IOException {
-        BaseTest<NonComparisonSortTest, SolutionRecord> baseTestInteger = new BaseTest<>(NonComparisonSortTest.class,
+        BaseTest<NonComparisonSortTest, IntegerArrayRecord> baseTestInteger = new BaseTest<>(
+                NonComparisonSortTest.class,
                 new TypeReference<>() {
-                }, SolutionRecord::getArguments);
+                }, IntegerArrayRecord::getArguments);
         return baseTestInteger.prepare().stream();
     }
 
@@ -26,6 +27,15 @@ class NonComparisonSortTest {
     @MethodSource("sort")
     public void testSelectionSort(String ignoredMessage, int[] input, int[] output) {
         NonComparisonSort nonComparisonSort = new CountingSort();
+        nonComparisonSort.sort(input);
+        assertArrayEquals(output, input);
+    }
+
+    @DisplayName("Radix sort")
+    @ParameterizedTest(name = "{0}, input = {1}, output = {2}")
+    @MethodSource("sort")
+    public void testRadixSort(String ignoredMessage, int[] input, int[] output) {
+        NonComparisonSort nonComparisonSort = new RadixSort();
         nonComparisonSort.sort(input);
         assertArrayEquals(output, input);
     }
