@@ -1,0 +1,30 @@
+[
+  {
+    "message": "Example 1",
+    "s1": "aabcc",
+    "s2": "dbbca",
+    "s3": "aadbbcbcac",
+    "output": true
+  },
+  {
+    "message": "Example 2",
+    "s1": "aabcc",
+    "s2": "dbbca",
+    "s3": "aadbbbaccc",
+    "output": false
+  },
+  {
+    "message": "Example 3",
+    "s1": "",
+    "s2": "",
+    "s3": "",
+    "output": true
+  },
+  {
+    "message": "My Example 1",
+    "s1": "w",
+    "s2": "w",
+    "s3": "www",
+    "output": false
+  }
+]
