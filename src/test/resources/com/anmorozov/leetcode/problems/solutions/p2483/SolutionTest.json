@@ -1,0 +1,15 @@
+[
+  {
+    "message": "Example 1",
+    "customers": "YYNY",
+    "output": 2
+  }, {
+  "message": "Example 2",
+  "customers": "NNNNN",
+  "output": 0
+}, {
+  "message": "Example 3",
+  "customers": "YYYY",
+  "output": 4
+}
+]
