@@ -1,13 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public class P0133 {
 
@@ -16,7 +9,7 @@ public class P0133 {
             return null;
         }
 
-        // Hash map to save the visited node and it's respective clone
+        // Hash map to save the visited node, and it's respective clone
         // as key and value respectively. This helps to avoid cycles.
         HashMap<Node, Node> visited = new HashMap<>();
 
@@ -28,7 +21,7 @@ public class P0133 {
 
         // Start BFS traversal
         while (!queue.isEmpty()) {
-            // Pop a node say "n" from the from the front of the queue.
+            // Pop a node say "n" from the front of the queue.
             Node n = queue.remove();
             // Iterate through all the neighbors of the node "n"
             for (Node neighbor : n.neighbors) {

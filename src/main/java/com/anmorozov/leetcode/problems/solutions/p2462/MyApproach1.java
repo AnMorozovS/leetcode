@@ -31,13 +31,13 @@ public class MyApproach1 implements Solution {
         int result = 0;
         if (firstPart.peek() != null && (secondPart.peek() == null || firstPart.peek() <= secondPart.peek())) {
             result = firstPart.poll();
-            if (heap.size() > 0) {
+            if (!heap.isEmpty()) {
                 int temp = heap.pollFirst();
                 firstPart.add(temp);
             }
         } else if (secondPart.peek() != null && (firstPart.peek() == null || secondPart.peek() <= firstPart.peek())) {
             result = secondPart.poll();
-            if (heap.size() > 0) {
+            if (!heap.isEmpty()) {
                 int temp = heap.pollLast();
                 secondPart.add(temp);
             }

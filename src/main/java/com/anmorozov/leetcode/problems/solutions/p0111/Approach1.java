@@ -19,7 +19,7 @@ public class Approach1 implements Solution {
             return 1 + depthFirstSearch(root.left);
         }
 
-        // Both children are non-null, hence call for both childs.
+        // Both children are non-null, hence call for both children.
         return 1 + Math.min(depthFirstSearch(root.left), depthFirstSearch(root.right));
     }
 

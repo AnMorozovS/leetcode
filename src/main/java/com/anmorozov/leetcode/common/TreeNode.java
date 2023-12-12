@@ -1,10 +1,6 @@
 package com.anmorozov.leetcode.common;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Queue;
+import java.util.*;
 
 public class TreeNode {
 
@@ -26,7 +22,7 @@ public class TreeNode {
     }
 
     public static TreeNode convertFromArray(List<Integer> array) {
-        if (array.size() <= 0) {
+        if (array.isEmpty()) {
             return null;
         }
         List<TreeNode> parents = new ArrayList<>();

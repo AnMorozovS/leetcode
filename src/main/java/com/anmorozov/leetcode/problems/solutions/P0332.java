@@ -43,7 +43,7 @@ public class P0332 {
         } else {
             freeTickets.put(from + airport, oldNumb - 1);
         }
-        if (freeTickets.size() == 0) {
+        if (freeTickets.isEmpty()) {
             List<String> result = new ArrayList<>();
             result.add(airport);
             return result;

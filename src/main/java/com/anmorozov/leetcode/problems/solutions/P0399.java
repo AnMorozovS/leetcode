@@ -5,11 +5,25 @@ import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javafx.util.Pair;
 
 public class P0399 {
 
-    private final Map<String, Pair<String, Double>> gidWeight = new HashMap<>();
+    private final Map<String, Pair> gidWeight = new HashMap<>();
+
+    private Pair find(String nodeId) {
+        if (!gidWeight.containsKey(nodeId)) {
+            gidWeight.put(nodeId, new Pair(nodeId, 1.0));
+        }
+
+        Pair entry = gidWeight.get(nodeId);
+        if (!entry.key().equals(nodeId)) {
+            Pair newEntry = find(entry.key());
+            gidWeight.put(nodeId, new Pair(
+                    newEntry.key(), entry.value() * newEntry.value()));
+        }
+
+        return gidWeight.get(nodeId);
+    }
 
     public double[] calcEquation(List<List<String>> equations, double[] values,
                                  List<List<String>> queries) {
@@ -26,32 +40,17 @@ public class P0399 {
         return results;
     }
 
-    private Pair<String, Double> find(String nodeId) {
-        if (!gidWeight.containsKey(nodeId)) {
-            gidWeight.put(nodeId, new Pair<>(nodeId, 1.0));
-        }
-
-        Pair<String, Double> entry = gidWeight.get(nodeId);
-        if (!entry.getKey().equals(nodeId)) {
-            Pair<String, Double> newEntry = find(entry.getKey());
-            gidWeight.put(nodeId, new Pair<>(
-                    newEntry.getKey(), entry.getValue() * newEntry.getValue()));
-        }
-
-        return gidWeight.get(nodeId);
-    }
-
     private void union(String dividend, String divisor, Double value) {
-        Pair<String, Double> dividendEntry = find(dividend);
-        Pair<String, Double> divisorEntry = find(divisor);
+        Pair dividendEntry = find(dividend);
+        Pair divisorEntry = find(divisor);
 
-        String dividendGid = dividendEntry.getKey();
-        String divisorGid = divisorEntry.getKey();
-        Double dividendWeight = dividendEntry.getValue();
-        Double divisorWeight = divisorEntry.getValue();
+        String dividendGid = dividendEntry.key();
+        String divisorGid = divisorEntry.key();
+        Double dividendWeight = dividendEntry.value();
+        Double divisorWeight = divisorEntry.value();
 
         if (!dividendGid.equals(divisorGid)) {
-            gidWeight.put(dividendGid, new Pair<>(divisorGid, divisorWeight * value / dividendWeight));
+            gidWeight.put(dividendGid, new Pair(divisorGid, divisorWeight * value / dividendWeight));
         }
     }
 
@@ -59,13 +58,13 @@ public class P0399 {
         if (!gidWeight.containsKey(dividend) || !gidWeight.containsKey(divisor)) {
             return -1.0;
         } else {
-            Pair<String, Double> dividendEntry = find(dividend);
-            Pair<String, Double> divisorEntry = find(divisor);
+            Pair dividendEntry = find(dividend);
+            Pair divisorEntry = find(divisor);
 
-            String dividendGid = dividendEntry.getKey();
-            String divisorGid = divisorEntry.getKey();
-            Double dividendWeight = dividendEntry.getValue();
-            Double divisorWeight = divisorEntry.getValue();
+            String dividendGid = dividendEntry.key();
+            String divisorGid = divisorEntry.key();
+            Double dividendWeight = dividendEntry.value();
+            Double divisorWeight = divisorEntry.value();
 
             if (!dividendGid.equals(divisorGid)) {
                 return -1.0;
@@ -73,6 +72,9 @@ public class P0399 {
                 return dividendWeight / divisorWeight;
             }
         }
+    }
+
+    record Pair(String key, Double value) {
     }
 
 }

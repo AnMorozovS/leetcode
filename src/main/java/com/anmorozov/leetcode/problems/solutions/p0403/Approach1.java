@@ -8,8 +8,8 @@ import java.util.Map;
  * Approach 1: Top-Down Dynamic Programming
  */
 public class Approach1 implements Solution {
-    Map<Integer, Integer> mark = new HashMap<>();
-    int[][] dp = new int[2001][2001];
+    private final Map<Integer, Integer> mark = new HashMap<>();
+    private final int[][] dp = new int[2001][2001];
 
     boolean solve(int[] stones, int n, int index, int prevJump) {
         // If reached the last stone, return 1.

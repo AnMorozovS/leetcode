@@ -25,7 +25,7 @@ public class Approach3 implements Solution {
             if (currNode == destination) {
                 return true;
             }
-            // Add all unvisited neighbors of the current node to stack'
+            // Add all unvisited neighbors of the current node to stack
             // and mark it as visited.
             for (int nextNode : graph.get(currNode)) {
                 if (!seen[nextNode]) {

@@ -1,7 +1,7 @@
 package com.anmorozov.leetcode.problems.solutions.p1970;
 
 /**
- * 1970. Last Day Where You Can Still Cross Hard
+ * <p><strong>1970.</strong> Last Day "Where" You Can Still Cross Hard
  */
 public interface Solution {
 
