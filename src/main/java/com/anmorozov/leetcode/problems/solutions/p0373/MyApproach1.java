@@ -18,7 +18,7 @@ public class MyApproach1 implements Solution {
             }
         }
         List<List<Integer>> result = new ArrayList<>();
-        while (queue.size() > 0 && result.size() < k) {
+        while (!queue.isEmpty() && result.size() < k) {
             result.add(queue.poll());
         }
         return result;

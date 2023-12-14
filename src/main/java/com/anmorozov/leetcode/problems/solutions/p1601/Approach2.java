@@ -30,7 +30,7 @@ public class Approach2 implements Solution {
             }
 
             boolean flag = true;
-            // Check if it doesn;t violates the constraints
+            // Check if it doesn't violate the constraints
             for (int i = 0; i < n; i++) {
                 if (inDegree[i] != 0) {
                     flag = false;

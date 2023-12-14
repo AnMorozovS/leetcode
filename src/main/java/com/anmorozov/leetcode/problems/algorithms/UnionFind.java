@@ -1,9 +1,12 @@
 package com.anmorozov.leetcode.problems.algorithms;
 
+import lombok.Getter;
+
 public class UnionFind {
 
     private final int[] root;
     private final int[] rank;
+    @Getter
     private int count;
 
     public UnionFind(int size) {
@@ -39,7 +42,4 @@ public class UnionFind {
         }
     }
 
-    public int getCount() {
-        return count;
-    }
 }
