@@ -1,25 +1,25 @@
 package com.anmorozov.leetcode.problems.solutions.p0095;
 
 import com.anmorozov.leetcode.common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javafx.util.Pair;
 
 /**
  * Approach 1: Recursive Dynamic Programming.
  */
 public class Approach1 implements Solution {
 
-    public List<TreeNode> allPossibleBST(int start, int end, Map<Pair<Integer, Integer>, List<TreeNode>> memo) {
+    private List<TreeNode> allPossibleBST(int start, int end, Map<Pair, List<TreeNode>> memo) {
         List<TreeNode> res = new ArrayList<>();
         if (start > end) {
             res.add(null);
             return res;
         }
-        if (memo.containsKey(new Pair<>(start, end))) {
-            return memo.get(new Pair<>(start, end));
+        if (memo.containsKey(new Pair(start, end))) {
+            return memo.get(new Pair(start, end));
         }
         // Iterate through all values from start to end to construct left and right subtree recursively.
         for (int i = start; i <= end; ++i) {
@@ -34,13 +34,16 @@ public class Approach1 implements Solution {
                 }
             }
         }
-        memo.put(new Pair<>(start, end), res);
+        memo.put(new Pair(start, end), res);
         return res;
     }
 
     @Override
     public List<TreeNode> generateTrees(int n) {
-        Map<Pair<Integer, Integer>, List<TreeNode>> memo = new HashMap<>();
+        Map<Pair, List<TreeNode>> memo = new HashMap<>();
         return allPossibleBST(1, n, memo);
+    }
+
+    record Pair(Integer key, Integer value) {
     }
 }

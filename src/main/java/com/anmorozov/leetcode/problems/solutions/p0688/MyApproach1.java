@@ -23,7 +23,7 @@ public class MyApproach1 implements Solution {
 
     private BigDecimal useCache(int k, int row, int column) {
         Map<String, BigDecimal> subMap = cache.computeIfAbsent(k, HashMap::new);
-        String hash = "" + row + "," + column;
+        String hash = row + "," + column;
         if (!subMap.containsKey(hash)) {
             BigDecimal result = knightMove(k, row, column);
             subMap.put(hash, result);

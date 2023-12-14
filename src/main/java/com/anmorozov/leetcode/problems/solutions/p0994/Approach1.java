@@ -2,16 +2,14 @@ package com.anmorozov.leetcode.problems.solutions.p0994;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
-import javafx.util.Pair;
 
 /**
  * Approach 1: Breadth-First Search (BFS)
  */
 public class Approach1 implements Solution {
-
     @Override
     public int orangesRotting(int[][] grid) {
-        Queue<Pair<Integer, Integer>> queue = new ArrayDeque<>();
+        Queue<Pair> queue = new ArrayDeque<>();
 
         // Step 1). build the initial set of rotten oranges
         int freshOranges = 0;
@@ -21,7 +19,7 @@ public class Approach1 implements Solution {
         for (int r = 0; r < rows; ++r) {
             for (int c = 0; c < cols; ++c) {
                 if (grid[r][c] == 2) {
-                    queue.offer(new Pair<>(r, c));
+                    queue.offer(new Pair(r, c));
                 } else if (grid[r][c] == 1) {
                     freshOranges++;
                 }
@@ -29,22 +27,22 @@ public class Approach1 implements Solution {
         }
 
         // Mark the round / level, _i.e_ the ticker of timestamp
-        queue.offer(new Pair<>(-1, -1));
+        queue.offer(new Pair(-1, -1));
 
         // Step 2). start the rotting process via BFS
         int minutesElapsed = -1;
         int[][] directions = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 
         while (!queue.isEmpty()) {
-            Pair<Integer, Integer> p = queue.poll();
-            int row = p.getKey();
-            int col = p.getValue();
+            Pair p = queue.poll();
+            int row = p.key();
+            int col = p.value();
             if (row == -1) {
                 // We finish one round of processing
                 minutesElapsed++;
                 // to avoid the endless loop
                 if (!queue.isEmpty()) {
-                    queue.offer(new Pair<>(-1, -1));
+                    queue.offer(new Pair(-1, -1));
                 }
             } else {
                 // this is a rotten orange
@@ -59,7 +57,7 @@ public class Approach1 implements Solution {
                             grid[neighborRow][neighborCol] = 2;
                             freshOranges--;
                             // this orange would then contaminate other oranges
-                            queue.offer(new Pair<>(neighborRow, neighborCol));
+                            queue.offer(new Pair(neighborRow, neighborCol));
                         }
                     }
                 }
@@ -68,5 +66,8 @@ public class Approach1 implements Solution {
 
         // return elapsed minutes if no fresh orange left
         return freshOranges == 0 ? minutesElapsed : -1;
+    }
+
+    record Pair(Integer key, Integer value) {
     }
 }

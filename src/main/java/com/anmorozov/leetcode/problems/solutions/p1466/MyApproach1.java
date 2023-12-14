@@ -1,6 +1,7 @@
 package com.anmorozov.leetcode.problems.solutions.p1466;
 
 import com.anmorozov.leetcode.common.QueueWithMemory;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,7 +25,7 @@ public class MyApproach1 implements Solution {
         QueueWithMemory<Path, Integer> actualCities = new QueueWithMemory<>(new Path(0, FORWARD), Path::city);
         int roadsNeedToChange = 0;
         while (!actualCities.isEmpty()) {
-            roadsNeedToChange += cityRoads.get(actualCities.poll().city()).stream()
+            roadsNeedToChange += (int) cityRoads.get(actualCities.poll().city()).stream()
                     .filter(actualCities::offer)
                     .filter(x -> x.direction() == FORWARD)
                     .count();

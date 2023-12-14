@@ -22,7 +22,7 @@ public class Approach1 implements Solution {
 
         // Outer while loop which iterates over
         // each level
-        while (queue.size() > 0) {
+        while (!queue.isEmpty()) {
 
             // Note the size of the queue
             int size = queue.size();
