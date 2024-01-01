@@ -94,7 +94,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.5.0</version>
                 <configuration>
-                    <show>private</show>
+                    <show>public</show>
                     <nohelp>true</nohelp>
                 </configuration>
             </plugin>
@@ -119,9 +119,30 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.5.0</version>
-                <configuration>
-                    <show>public</show>
-                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <id>html</id>
+                        <configuration>
+                            <doctitle>My API for ${project.name} ${project.version}</doctitle>
+                            <windowtitle>My API for ${project.name} ${project.version}</windowtitle>
+                            <show>public</show>
+                        </configuration>
+                        <reports>
+                            <report>javadoc</report>
+                        </reports>
+                    </reportSet>
+                    <reportSet>
+                        <id>test-html</id>
+                        <configuration>
+                            <testDoctitle>My Test API for ${project.name} ${project.version}</testDoctitle>
+                            <testWindowtitle>My Test API for ${project.name} ${project.version}</testWindowtitle>
+                            <show>public</show>
+                        </configuration>
+                        <reports>
+                            <report>test-javadoc</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
         </plugins>
     </reporting>
