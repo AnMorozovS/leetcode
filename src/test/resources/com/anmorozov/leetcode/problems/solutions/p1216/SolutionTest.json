@@ -1,0 +1,20 @@
+[
+  {
+    "message": "Example 1",
+    "s": "abcdeca",
+    "k": 2,
+    "output": true
+  },
+  {
+    "message": "Example 2",
+    "s": "abbababa",
+    "k": 1,
+    "output": true
+  },
+  {
+    "message": "My Example 1",
+    "s": "abababa",
+    "k": 1,
+    "output": true
+  }
+]
