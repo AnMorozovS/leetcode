@@ -20,7 +20,7 @@ public interface Solution {
      * </ul>
      *
      * @param nums an integer array
-     * @param k number to elemets to return
+     * @param k number to elements to return
      * @return <em>the</em> {@code k} <em>most frequent elements</em>
      */
     int[] topKFrequent(int[] nums, int k);
