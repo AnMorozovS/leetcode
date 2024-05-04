@@ -5,7 +5,7 @@ import java.util.Collection;
 
 public class HeapSort<T extends Comparable<T>> implements ComparisonSort<T> {
 
-    T[] instance;
+    final T[] instance;
 
     public HeapSort(T[] instance) {
         this.instance = instance;

@@ -1,13 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions.p0743;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public class MyApproach1 implements Solution {
 
@@ -27,7 +20,7 @@ public class MyApproach1 implements Solution {
         nodeToVisit.add(List.of(k, 0));
         Set<Integer> visitedNode = new HashSet<>();
         while (!nodeToVisit.isEmpty()) {
-            int node = nodeToVisit.poll().get(0);
+            int node = nodeToVisit.poll().getFirst();
             if (visitedNode.contains(node)) {
                 continue;
             }

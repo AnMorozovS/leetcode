@@ -3,15 +3,7 @@ package com.anmorozov.leetcode.common;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Node {
-
-    public final int value;
-    public final List<Node> children;
-
-    public Node(int value, List<Node> children) {
-        this.value = value;
-        this.children = children;
-    }
+public record Node(int value, List<Node> children) {
 
     public static Node convertNodeArray(int[] array) {
         List<Node> parents = new ArrayList<>();
@@ -28,7 +20,7 @@ public class Node {
                 } else {
                     parents = children;
                     parentIndex = 0;
-                    parent = children.get(0);
+                    parent = children.getFirst();
                     children = new ArrayList<>();
 
                 }
@@ -39,7 +31,7 @@ public class Node {
                 }
                 children.add(child);
                 if (parent != null) {
-                    parent.children.add(child);
+                    parent.children().add(child);
                 }
             }
         }

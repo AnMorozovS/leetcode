@@ -10,7 +10,7 @@ public class MyApproach1 implements Solution {
     @Override
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
 
-        PriorityQueue<List<Integer>> queue = new PriorityQueue<>(Comparator.comparingInt(x -> (x.get(0) + x.get(1))));
+        PriorityQueue<List<Integer>> queue = new PriorityQueue<>(Comparator.comparingInt(x -> (x.getFirst() + x.get(1))));
 
         for (int i : nums1) {
             for (int j : nums2) {

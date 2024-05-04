@@ -48,7 +48,7 @@ public class P0733 {
         }
     }
 
-    record Cell(int xCoordinate, int yCoordinate) {
+    public record Cell(int xCoordinate, int yCoordinate) {
 
         @Override
         public boolean equals(Object o) {

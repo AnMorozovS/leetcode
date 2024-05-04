@@ -1,6 +1,7 @@
 package com.anmorozov.leetcode.problems.solutions.p0095;
 
 import com.anmorozov.leetcode.common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class Approach3 implements Solution {
         for (int i = 0; i <= n; i++) {
             dp.add(new ArrayList<>());
         }
-        dp.get(0).add(null);
+        dp.getFirst().add(null);
 
         for (int numberOfNodes = 1; numberOfNodes <= n; numberOfNodes++) {
             for (int i = 1; i <= numberOfNodes; i++) {

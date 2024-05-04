@@ -1,5 +1,8 @@
 package com.anmorozov.leetcode.problems.solutions.p0139;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +18,14 @@ public class Approach4 implements Solution {
         for (String word : wordDict) {
             TrieNode curr = root;
             for (char c : word.toCharArray()) {
-                if (!curr.children.containsKey(c)) {
-                    curr.children.put(c, new TrieNode());
+                if (!curr.getChildren().containsKey(c)) {
+                    curr.getChildren().put(c, new TrieNode());
                 }
 
-                curr = curr.children.get(c);
+                curr = curr.getChildren().get(c);
             }
 
-            curr.isWord = true;
+            curr.setWord(true);
         }
 
         boolean[] dp = new boolean[s.length()];
@@ -31,13 +34,13 @@ public class Approach4 implements Solution {
                 TrieNode curr = root;
                 for (int j = i; j < s.length(); j++) {
                     char c = s.charAt(j);
-                    if (!curr.children.containsKey(c)) {
+                    if (!curr.getChildren().containsKey(c)) {
                         // No words exist
                         break;
                     }
 
-                    curr = curr.children.get(c);
-                    if (curr.isWord) {
+                    curr = curr.getChildren().get(c);
+                    if (curr.isWord()) {
                         dp[j] = true;
                     }
                 }
@@ -47,10 +50,12 @@ public class Approach4 implements Solution {
         return dp[s.length() - 1];
     }
 
+    @Getter
+    @Setter
     static class TrieNode {
 
-        boolean isWord;
-        Map<Character, TrieNode> children;
+        private final Map<Character, TrieNode> children;
+        private boolean isWord;
 
         TrieNode() {
             this.children = new HashMap<>();

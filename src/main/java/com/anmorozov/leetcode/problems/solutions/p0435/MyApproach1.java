@@ -32,9 +32,9 @@ public class MyApproach1 implements Solution {
         if (edges.isEmpty()) {
             return 0;
         }
-        List<List<Integer>> edges1 = deleteNode(edges, edges.get(0).get(0));
+        List<List<Integer>> edges1 = deleteNode(edges, edges.getFirst().getFirst());
         int count1 = deleteEdge(edges1) + 1;
-        List<List<Integer>> edges2 = deleteNode(edges, edges.get(0).get(1));
+        List<List<Integer>> edges2 = deleteNode(edges, edges.getFirst().get(1));
         int count2 = deleteEdge(edges2) + 1;
         return Math.min(count1, count2);
     }

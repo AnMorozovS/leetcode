@@ -1,0 +1,23 @@
+[
+  {
+    "message": "Example 1",
+    "people": [1, 2],
+    "limit": 3,
+    "output": 1
+  }, {
+  "message": "Example 2",
+  "people": [3, 2, 2, 1],
+  "limit": 3,
+  "output": 3
+}, {
+  "message": "Example 3",
+  "people": [3, 5, 3, 4],
+  "limit": 5,
+  "output": 4
+}, {
+  "message": "Example 58",
+  "people": [3, 2, 3, 2, 2],
+  "limit": 6,
+  "output": 3
+}
+]
