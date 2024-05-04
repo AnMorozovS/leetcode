@@ -9,12 +9,10 @@ public class P0332 {
 
     Map<String, List<String>> ticketsMap;
     Map<String, Integer> freeTickets;
-    int ticketsNumber;
 
     public List<String> findItinerary(List<List<String>> tickets) {
         this.ticketsMap = new HashMap<>();
         this.freeTickets = new HashMap<>();
-        ticketsNumber = tickets.size();
         for (List<String> list : tickets) {
             ticketsMap.computeIfAbsent(list.get(0), x -> new ArrayList<>()).add(list.get(1));
             int count = freeTickets.computeIfAbsent(list.get(0) + list.get(1), x -> 0);

@@ -5,7 +5,7 @@ import java.util.Collection;
 
 public class SelectionSort<T extends Comparable<T>> implements ComparisonSort<T> {
 
-    T[] instance;
+    final T[] instance;
 
     public SelectionSort(T[] instance) {
         this.instance = instance;

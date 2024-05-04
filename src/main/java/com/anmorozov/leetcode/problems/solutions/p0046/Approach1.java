@@ -25,7 +25,7 @@ public class Approach1 implements Solution {
             if (!curr.contains(num)) {
                 curr.add(num);
                 backtrack(curr, ans, nums);
-                curr.remove(curr.size() - 1);
+                curr.removeLast();
             }
         }
     }

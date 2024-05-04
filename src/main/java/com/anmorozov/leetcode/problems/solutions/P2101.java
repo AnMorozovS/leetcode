@@ -1,11 +1,6 @@
 package com.anmorozov.leetcode.problems.solutions;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class P2101 {
 
@@ -55,27 +50,7 @@ public class P2101 {
         return maxSize;
     }
 
-    private String toStringBombMap(Map<Bomb, Set<Bomb>> detonatedTotal) {
-        StringBuilder builder = new StringBuilder();
-        for (Map.Entry<Bomb, Set<Bomb>> entry : detonatedTotal.entrySet()) {
-            Bomb currentBomb = entry.getKey();
-            Set<Bomb> currentSet = entry.getValue();
-            builder.append(currentBomb).append(" [");
-            boolean flag = false;
-            for (Bomb setBomb : currentSet) {
-                if (flag) {
-                    builder.append(",");
-                } else {
-                    flag = true;
-                }
-                builder.append("(").append(setBomb.number).append(")");
-            }
-            builder.append("]\n");
-        }
-        return builder.toString();
-    }
-
-    record Bomb(int x, int y, int radius, int number) {
+    public record Bomb(int x, int y, int radius, int number) {
 
         @Override
         public boolean equals(Object o) {

@@ -1,6 +1,7 @@
 package com.anmorozov.leetcode.problems.solutions;
 
 import com.anmorozov.leetcode.common.TreeNode;
+
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -17,10 +18,10 @@ public class P0098 {
     }
 
     public boolean isValidBST(TreeNode root) {
-        Integer low = null;
-        Integer high = null;
+        Integer low;
+        Integer high;
         Integer val;
-        update(root, low, high);
+        update(root, null, null);
 
         while (!stack.isEmpty()) {
             root = stack.poll();

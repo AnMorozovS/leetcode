@@ -5,7 +5,7 @@ import java.util.Collection;
 
 public class BubbleSort<T extends Comparable<T>> implements ComparisonSort<T> {
 
-    T[] instance;
+    final T[] instance;
 
     public BubbleSort(T[] instance) {
         this.instance = instance;

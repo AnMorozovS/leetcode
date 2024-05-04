@@ -7,7 +7,7 @@ import java.util.Objects;
  */
 public class ListNode {
 
-    public int value;
+    public final int value;
     public ListNode next;
 
     public ListNode(int val) {

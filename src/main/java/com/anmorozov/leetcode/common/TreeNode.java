@@ -27,7 +27,7 @@ public class TreeNode {
         }
         List<TreeNode> parents = new ArrayList<>();
         List<TreeNode> children = new ArrayList<>();
-        TreeNode head = new TreeNode(array.get(0));
+        TreeNode head = new TreeNode(array.getFirst());
         TreeNode parent = head;
         parents.add(parent);
         TreeNode child;

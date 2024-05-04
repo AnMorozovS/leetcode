@@ -68,7 +68,7 @@ public class Approach1LRUCache extends LRUCache {
         node.next.prev = node.prev;
     }
 
-    static class ListNode {
+    public static class ListNode {
 
         /**
          * @noinspection FieldNamingConvention

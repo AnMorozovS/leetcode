@@ -36,7 +36,7 @@ public class P1569 {
         List<Integer> leftNodes = new ArrayList<>();
         List<Integer> rightNodes = new ArrayList<>();
         for (int i = 1; i < m; ++i) {
-            if (nums.get(i) < nums.get(0)) {
+            if (nums.get(i) < nums.getFirst()) {
                 leftNodes.add(nums.get(i));
             } else {
                 rightNodes.add(nums.get(i));

@@ -8,6 +8,22 @@ import java.util.Comparator;
  */
 public class P2448 {
 
+    private static long getAnswer(int n, int[][] numsAndCost, long[] prefixCost) {
+        long totalCost = 0L;
+        for (int i = 1; i < n; ++i) {
+            totalCost = totalCost + (long) numsAndCost[i][1] * (numsAndCost[i][0] - numsAndCost[0][0]);
+        }
+        long answer = totalCost;
+
+        for (int i = 1; i < n; ++i) {
+            int gap = numsAndCost[i][0] - numsAndCost[i - 1][0];
+            totalCost = totalCost + prefixCost[i - 1] * gap;
+            totalCost = totalCost - (prefixCost[n - 1] - prefixCost[i - 1]) * gap;
+            answer = Math.min(answer, totalCost);
+        }
+        return answer;
+    }
+
     /**
      * <p>You are given two <b>0-indexed</b> arrays {@code nums} and {@code cost} consisting each of {@code n}
      * <b>positive</b> integers.</p>
@@ -46,20 +62,7 @@ public class P2448 {
             prefixCost[i] = numsAndCost[i][1] + prefixCost[i - 1];
         }
 
-        long totalCost = 0L;
-        for (int i = 1; i < n; ++i) {
-            totalCost = totalCost + (long) numsAndCost[i][1] * (numsAndCost[i][0] - numsAndCost[0][0]);
-        }
-        long answer = totalCost;
-
-        for (int i = 1; i < n; ++i) {
-            int gap = numsAndCost[i][0] - numsAndCost[i - 1][0];
-            totalCost = totalCost + prefixCost[i - 1] * gap;
-            totalCost = totalCost - (prefixCost[n - 1] - prefixCost[i - 1]) * gap;
-            answer = Math.min(answer, totalCost);
-        }
-
-        return answer;
+        return getAnswer(n, numsAndCost, prefixCost);
     }
 
 }
